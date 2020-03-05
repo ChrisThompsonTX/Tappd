@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SessionForm extends React.Component {
+class LoginForm extends React.Component {
 
     constructor(props) {
         super(props);
@@ -9,8 +9,13 @@ class SessionForm extends React.Component {
             username: '',
             password: ''
         };
+
         this.handleSubmit = this.handleSubmit.bind(this);
 
+    }
+
+    update(field) {
+        return e => this.setState({[field]: e.currentTarget.value});
     }
 
     handleSubmit(e) {
@@ -21,7 +26,7 @@ class SessionForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul class="errors-list">
+            <ul className="errors-list">
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -66,4 +71,4 @@ class SessionForm extends React.Component {
 
 };
 
-export default SessionForm;
+export default LoginForm;
