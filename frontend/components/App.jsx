@@ -3,16 +3,17 @@ import GreetingContainer from "./greeting/greeting_container";
 import LogInFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import { Route } from 'react-router-dom';
+import { AuthRoute } from '../util/route_util';
+import SplashContainer from './splash/splash_page_container'
 
 const App = () => (
     <div>
         <header>
-            <h1>Welcome</h1>
             <GreetingContainer />
         </header>
-
-        <Route path="/login" component={LogInFormContainer} />
-        <Route path="/signup" component={SignupFormContainer} />
+        <Route exact path="/" component={SplashContainer} />
+        <AuthRoute path="/login" component={LogInFormContainer} />
+        <AuthRoute path="/signup" component={SignupFormContainer} />
     </div>
 );
 

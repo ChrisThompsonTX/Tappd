@@ -13,8 +13,8 @@ const Greeting = (state) => {
     } else {
         return (
             <nav className="login-signup">
-                <Link to="/login">Login</Link>
-                <Link to="/signup">Sign up!</Link>
+                <Link className="signin header-button" to="/login">SIGN IN</Link>
+                <Link className="header header-button" to="/signup">CREATE AN ACCOUNT</Link>
             </nav>
         )   
     }
