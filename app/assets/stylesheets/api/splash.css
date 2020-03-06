@@ -1,6 +1,7 @@
 #beer-video {
     width: 100%;
     z-index: 1;
+    position: absolute;
 }
 
 .modal-background {
@@ -10,7 +11,42 @@
   right: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 3;
+  z-index: 2;
 }
 
 
+.left-splash {
+    z-index: 4;
+    width: 40%;
+    vertical-align: middle;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding-top: 13%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.left-splash h2{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    align-self: center;
+    font-size: 2.5rem;
+    text-align: center;
+
+}
+
+.short-rule {
+    margin: 20px auto;
+    background: #ffc000;
+    height: 4px;
+    width: 50px;
+    align-self: center;
+}
+
+.logo {
+    align-self: center;
+}

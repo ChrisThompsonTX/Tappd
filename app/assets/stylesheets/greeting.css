@@ -10,6 +10,12 @@
     right: 1%;
 }
 
+.header-button:hover {
+    background-color: white;
+    color: black; 
+    transition: .5s;
+}
+
 .header-button{
     border-radius: 4px;
     font-weight: 600;

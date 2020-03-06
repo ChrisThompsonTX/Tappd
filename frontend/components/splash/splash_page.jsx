@@ -16,8 +16,16 @@ class SplashPage extends React.Component{
                     id="beer-video"
                 />
 
-                {/* <div className="blackout"></div> */}
                 <div className="modal-background"></div>
+
+
+                <div className="left-splash">
+                    <div className="logo"><img src="https://untappd.akamaized.net/assets/custom/homepage/images/ut-logo-bottles.svg" /></div>
+                    <div className="short-rule"></div>
+                    <h2>Discover and share your favorite beer.</h2>
+                </div>
+
+                <div className="right-splash"></div>
             </div>
         )
     }
