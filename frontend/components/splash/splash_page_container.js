@@ -3,7 +3,7 @@ import SplashPage from './splash_page'
 
 const mSTP = state => {
     return{
-
+        session: state.ui.modal
     }
 }
 

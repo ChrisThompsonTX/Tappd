@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Greeting = (state) => {
 
@@ -13,8 +12,8 @@ const Greeting = (state) => {
     } else {
         return (
             <nav className="login-signup">
-                <Link className="signin header-button" to="/login">SIGN IN</Link>
-                <Link className="header header-button" to="/signup">CREATE AN ACCOUNT</Link>
+                <button className="signin header-button" onClick={() => state.openModal('login')}>SIGN IN</button>
+                <button className="header header-button" onClick={() => state.openModal('signup')}>CREATE AN ACCOUNT</button>
             </nav>
         )   
     }

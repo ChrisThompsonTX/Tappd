@@ -4,13 +4,13 @@
     position: absolute;
 }
 
-.modal-background {
+.modal-screen {
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.15);
   z-index: 2;
 }
 
@@ -23,10 +23,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: auto;
-    padding-top: 13%;
+    height: 550px;
     padding-left: 5%;
     padding-right: 5%;
+    /* padding-top: 9%; */
 }
 
 .left-splash h2{
@@ -34,7 +34,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     align-self: center;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
 
 }
@@ -45,8 +45,400 @@
     height: 4px;
     width: 50px;
     align-self: center;
+    position: relative;
+    text-align: center;
 }
 
 .logo {
     align-self: center;
+    padding-top: 20%;
+}
+
+.logo-session {
+    align-self: center;
+    animation: mymove 2s forwards;
+}
+
+.features {
+    background-color: white;
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* padding-top: 13%; */
+    padding-right: 5%;
+    height: 457px;
+    padding-top: 60px;
+    padding-bottom: 0px;
+    top: 70px;
+    border-bottom: 2px solid lightgray;
+    border-top: 2px solid #e7e7e7;
+}
+
+.features h4, .other-features h4, .app-callout h3, .brewery-callout h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    text-align: center; 
+    padding-top: 14px;
+    font-weight: bolder;
+}
+
+.features p, .map-section p, .other-features p, .utfb-content p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    width: 80%;
+    font-weight: 100;
+}
+
+.left-features {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-features {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screenshot {
+    box-shadow: 0 2px 14px rgba(0,0,0,.3);
+}
+
+@keyframes mymove {
+  from {padding-top: 20%;}
+  to {padding-top: 8%;}
+}
+
+.modal-child {
+    align-self: center;
+    color: black;
+}
+
+.session-form {
+    background-color: white;
+    animation: fade-in 1s forwards;
+    width: 70%;
+    align-self: center;
+    border-radius: 4px;
+}
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.session-form-container {
+    align-self: center;
+}
+
+.session-form-box {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+
+.form-top, .formBottom{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
+
+.session-input {
+    border: 0;
+    width: 90%;
+    padding-left: 3px;
+    outline: none;
+}
+
+.form-input {
+    border: #666666 1px solid;
+    border-radius: 3px;
+    padding: 2px 2px 4px 2px;
+    display: flex;
+    align-content: center;
+    box-shadow: 1px 1px 1px grey;
+    font-weight: 500;
+    color: grey;
+    margin: 5% 0% 0% 0%;
+}
+
+.session-submit {
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #ffcc00;
+    color: white;
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 5% 0% 5% 0%;
+}
+
+.input-icon {
+    height: 12px;
+    width: 12px;
+    padding: 3px;
+    margin: 5px;
+}
+
+.map-section {
+    background: linear-gradient(rgba(251,251,251,.7),#fbfbfb 80%),url(https://untappd.akamaized.net/assets/custom/homepage/images/map-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    border-top: 2px solid #e7e7e7;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: block;
+}
+
+.map-content {
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.splash {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.phone-container {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.phone {
+    /* width: 300px;
+    height: 530px; */
+    object-fit: contain;
+    max-width: 100%;
+    display: inline-block;
+    height: auto;
+    padding-top: 120px;
+}
+
+.other-features {
+    top: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4%;
+    border-top: 2px solid #e7e7e7;
+}
+
+.map-info h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    align-self: left;
+    font-size: 2.2rem;
+}
+
+.other-features h2, .utfb-content h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.2rem;
+    padding-top: 2%;
+}
+
+.map-info {
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+}
+
+.map-info p {
+    text-align: left;
+}
+
+.map-info div, .utfb-content div {
+    margin-left: 0;
+}
+
+.other-feature-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.feature-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+}
+
+.feature-items h4 {
+    padding: 4%;
+}
+
+.app-callout, footer {
+    height: auto;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.app-callout h3 {
+    color: white;
+    padding-top: 0;
+}
+
+#get-app-button, #claim-brewery{
+    padding: 2px 20px;
+    margin-left: 3%;
+}
+
+.utfb-laptop {
+    height: auto;
+    max-width: 100%;
+}
+
+.utfb {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 40px 0;
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.utfb-content {
+    padding-left: 8%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.utfb-content ul{
+    list-style-position: inside;
+}
+
+.utfb-content li {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+    width: 80%;
+    font-weight: 50;
+
+}
+
+.utfb-content h2, .utfb-content p {
+    text-align: left;
+    padding: 1% 0%;
+}
+
+.utfb button {
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #ffcc00;
+    color: white;
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 2px 20px 6px 20px;
+    margin: 2% 0%;
+}
+
+.utfb button:hover {
+    background-color: #ff9900;
+    transition: .5s;
+}
+
+.brewery-callout {
+    height: auto;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#claim-brewery {
+    margin-top: 1%;
+    color: black;
+    border-color: black;
+    align-self: center;
+    margin-left: 0;
+}
+
+#claim-brewery:hover {
+    background-color: black;
+    color: white;
+    transition: .5s;
+}
+
+#footer-nav button {
+    background: none;
+	color: white;
+	border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+	cursor: pointer;
+}
+
+#footer-nav button:hover {
+    color: gray;
+}
+
+#footer-nav {
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 60%;
+}
+
+#footer-nav p{
+    color: white;
+}
+
+footer {
+    background-color: #1e1f1d;
+}
+
+.social-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 30px 0px;
+}
+
+.social-links input{
+    margin: 0 1%;
 }

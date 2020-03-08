@@ -5,9 +5,11 @@ import SignupFormContainer from './session_form/signup_form_container';
 import { Route } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import SplashContainer from './splash/splash_page_container'
+// import Modal from './modal/modal';
 
 const App = () => (
     <div>
+        {/* <Modal /> */}
         <header>
             <GreetingContainer />
         </header>
