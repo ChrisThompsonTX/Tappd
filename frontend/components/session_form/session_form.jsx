@@ -24,26 +24,30 @@ class SessionForm extends React.Component {
         this.props.processForm(user);
     }
 
-    renderErrors() {
-        return (
-            <ul className="errors-list">
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
-    }
 
     render() {
 
         return (
             <div className="session-form-container">
                 <form onSubmit={this.handleSubmit} className="session-form-box">
-                    {this.renderErrors()}
                     <div className="session-form">
                         <div className="form-top">
+                            <div className="error-box">
+                                {this.props.formType === 'login' ?
+                                <div className="error">
+                                    {this.props.errors[0]}
+                                </div>
+                                :
+                                null
+                                }
+                                {this.props.formType === 'signup' ?
+                                <div className="error">
+                                    {this.props.errors.username}
+                                </div>
+                                :
+                                null
+                                }
+                            </div>
                             <div className="form-input">
                                 <img className="input-icon" src="https://untappd.akamaized.net/assets/v3/images/login_user_ico.png" />  
                                 <input type="text"
@@ -53,24 +57,46 @@ class SessionForm extends React.Component {
                                     placeholder="Username"
                                     />
                             </div>
+                            <div className="error-box">
+                                {this.props.formType === 'signup' ?
+                                    <div className="error">
+                                        {this.props.errors.password}
+                                    </div>
+                                    :
+                                    null
+                                }
+                            </div>
                             <div className="form-input">
                                 <img className="input-icon" src="https://untappd.akamaized.net/assets/v3/images/login_lock_ico.png" />
                                 <input type="password"
-                                    value={this.state.password}
+                                    value={this.state.password[0]}
                                     onChange={this.update('password')}
                                     className="session-input password"
                                     placeholder="Password"
                                     />
                             </div>
-                            {this.props.formType === "signup" ? 
-                                <div className="form-input">
-                                    <img className="input-icon" src="https://untappd.akamaized.net/assets/v3/images/login_email_ico.png" />  
-                                    <input type="text"
-                                    value={this.state.email}
-                                    onChange={this.update('email')}
-                                    className="session-input email"
-                                    placeholder="E-mail"
-                                    />
+                            {this.props.formType === "signup" ?
+                                <div>
+                                     <div className="error-box">
+                                         {this.props.errors.email ? 
+                                            <div className="error">
+                                                {this.props.errors.password}
+                                            </div>
+                                        :
+                                            null
+                                        }
+                                    </div>
+                                    <div className="form-input">
+                                        <img className="input-icon" src="https://untappd.akamaized.net/assets/v3/images/login_email_ico.png" />  
+                                        <input type="text"
+                                        value={this.state.email}
+                                        onChange={this.update('email')}
+                                        className="session-input email"
+                                        placeholder="E-mail"
+                                        />
+                                    </div>
+
+
                                 </div>
                                 : 
                                 null
