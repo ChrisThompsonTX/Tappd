@@ -60,7 +60,7 @@ class SplashPage extends React.Component{
                 <section className="other-features">
                     <h2>Other Great Features</h2>
                     <div className="short-rule"></div>
-                    <div className="other-feature-container">
+                    <div className="other-feature-container pad">
                         <div className="feature-items">
                             <img src="https://untappd.akamaized.net/assets/custom/homepage/images/icon-menu.svg"/>
                             <h4>UPDATED MENUS</h4>

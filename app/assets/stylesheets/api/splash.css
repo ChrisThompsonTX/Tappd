@@ -173,7 +173,7 @@
     /* margin: 5% 0% 0% 0%; */
 }
 
-.session-submit {
+.session-submit, .demo-user {
     height: 30px;
     cursor: pointer;
     text-align: center;
@@ -183,7 +183,13 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 16px;
-    margin: 5% 0% 5% 0%;
+    margin: 5% 0%;
+}
+
+.demo-user {
+    background-color: #3b5998;
+    width: 100%;
+    margin: 0 0 5% 0;
 }
 
 .input-icon {
@@ -365,7 +371,7 @@
     margin: 2% 0%;
 }
 
-.utfb button:hover {
+.utfb button:hover, .session-submit:hover {
     background-color: #ff9900;
     transition: .5s;
 }
@@ -442,4 +448,8 @@ footer {
 
 .social-links input{
     margin: 0 1%;
+}
+
+.pad {
+    padding-left: 3%;
 }

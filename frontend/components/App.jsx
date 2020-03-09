@@ -11,7 +11,7 @@ const App = () => (
             <GreetingContainer />
         </header>
         <Route exact path="/" component={SplashContainer} />
-        <Route path="/home" component={SplashContainer} />
+        {/* <AuthRoute path="/home" component={HomeContainer} /> */}
     </div>
 );
 

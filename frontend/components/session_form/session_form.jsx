@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoUser = this.demoUser.bind(this);
     }
 
     update(field) {
@@ -24,6 +25,13 @@ class SessionForm extends React.Component {
         this.props.processForm(user);
     }
 
+    demoUser() {
+        this.props.login({
+            username: "DemoUser",
+            password: "password",
+            email: "demo@demo.demo"
+        })
+    }
 
     render() {
 
@@ -69,7 +77,7 @@ class SessionForm extends React.Component {
                             <div className="form-input">
                                 <img className="input-icon" src="https://untappd.akamaized.net/assets/v3/images/login_lock_ico.png" />
                                 <input type="password"
-                                    value={this.state.password[0]}
+                                    value={this.state.password}
                                     onChange={this.update('password')}
                                     className="session-input password"
                                     placeholder="Password"
@@ -105,6 +113,7 @@ class SessionForm extends React.Component {
                         <div className="formBottom">
                             <input className="session-submit" type="submit" value={this.props.formType} />
                         </div>
+                        <button className="demo-user" onClick={this.demoUser}>Demo User</button>
                     </div>
                 </form>
             </div>
