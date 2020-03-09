@@ -119,7 +119,6 @@ class SplashPage extends React.Component{
                             <button>API</button>
                             <button>Terms</button>
                             <button>Privacy</button>
-                            <button>Privacy</button>
                         </div>
                         <p>© Untappd, Inc. 2020</p>
                     </div>
