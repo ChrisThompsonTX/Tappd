@@ -15,4 +15,5 @@ class Brewery < ApplicationRecord
         through: :beers,
         source: :reviews
         
+    has_one_attached :logo
 end

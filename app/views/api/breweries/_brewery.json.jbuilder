@@ -11,3 +11,5 @@ json.extract! brewery,
     :lng,
     :beer_ids, 
     :review_ids
+
+json.logo url_for(brewery.logo)

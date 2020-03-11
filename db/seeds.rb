@@ -1,3 +1,5 @@
+require 'open-uri'
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -19,7 +21,10 @@ demo_user = User.create!({
     email: "demo@demo.demo"
     })
 
-# Breweries
+#############   
+# Breweries #
+#############
+
 brewery1 = Brewery.create!({
     name: "Moonlight Brewing Company",
     address: "3350 Coffey Ln suite a & d 95403",
@@ -29,6 +34,10 @@ brewery1 = Brewery.create!({
     description: "Moonlight Brewery was started in rural Santa Rosa in 1992 by Brian Hunt. Small by most all comparisons, the brewery has capacity for about 2500 barrels per year. Whereas the original brewery was in a converted tractor barn, today it is more commercial location. Currently all the beers are only sold in kegs and can be found in San Francisco, the East Bay and North Bay counties. Mendocino and Lake Counties have a few spots, and there are rare sightings in Santa Cruz, Seal Beach, and San Diego.",
     rating: 3.7
     })
+
+logo1 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BreweryLogos/moonlightbrewing.jpg')
+brewery1.logo.attach(io: logo1, filename: 'moonlightbrewing.jpg')
+
 brewery2 = Brewery.create!({
     name: "Logsdon Farmhouse Ales",
     address: "1834 Main St 98671",
@@ -38,6 +47,10 @@ brewery2 = Brewery.create!({
     description: "A Belgian-inspired brewery, founded in 2009 by David Logsdon on his family farm in Hood River County. David started as a founding member and brewer at Full Sail Brewing and founded Wyeast Laboratories. His passion for unique and experimental yeast helped to foster his dream of opening a traditional farmhouse brewery. We brew in the true Belgian farmhouse tradition using all organic and locally sourced ingredients. The fruity and well rounded flavor profiles of our beer can be attributed to our use of singular specialty yeast strains and many of our offerings spend time in oak barrels to impart more complex characteristics similar to that of a fine wine.",
     rating: 4
     })
+
+logo2 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BreweryLogos/logsdonbrewing.jpg')
+brewery2.logo.attach(io: logo2, filename: 'logsdonbrewing.jpg')
+
 brewery3 = Brewery.create!({
     name: "Russian River Brewing Company",
     address: "725 4th St 95404",
@@ -47,6 +60,10 @@ brewery3 = Brewery.create!({
     description: "Russian River Brewing Company (RRBC) was originally owned by Korbel Champagne Cellars in Guerneville, California and was founded on their historic and beautiful property amidst vineyards and redwoods near the Russian River. When Korbel decided to get out of the beer business in 2003, they generously offered the brewmaster, Vinnie Cilurzo and his wife Natalie the rights to the brand. Russian River Brewing might be something completely different now if it weren't for this incredible opportunity. In the early days on the Korbel property, Vinnie not only brewed the beer, but made the sales calls and deliveries as well. Eventually they hired a sales/delivery guy to help with all of that so he could focus on brewing! Korbel planted a small hop field where Vinnie received a 'field' education on growing and brewing with 'wet' hops. It was from those amazingly fresh hops, grown just a few yards away, that he made his first wet hops brew, 'Hop-Time Harvest Ale'. As it turns out, demand is still greater than the supply, but they prefer to grow their business organically while focusing on efficiencies and quality. For now, it is easier to make better beer than it is to make more beer! The history of Russian River Brewing Company would be incomplete without a little background on the people who own it, operate it, and are passionate about their brewery and craft beer in general!",
     rating: 4.2
     })
+
+logo3 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BreweryLogos/russianriverbrewing.png')
+brewery3.logo.attach(io: logo3, filename: 'russianriverbrewing.png')
+
 brewery4 = Brewery.create!({
     name: "Suarez Family Brewery",
     address: "2278 U.S. 9 12534",
@@ -56,6 +73,10 @@ brewery4 = Brewery.create!({
     description: "We're a mom and pop production brewery specializing in ales of mixed fermentation, unfiltered lagers, and other crispy little beers. Brewer owned and operated.",
     rating: 4.2
     })
+
+logo4 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BreweryLogos/suarezbrewing.jpg')
+brewery4.logo.attach(io: logo4, filename: 'suarezbrewing.jpg')
+
 brewery5 = Brewery.create!({
     name: "Jester King Brewery",
     address: "13187 Fitzhugh Rd 78736",
@@ -65,6 +86,10 @@ brewery5 = Brewery.create!({
     description: "Located in the beautiful Texas Hill Country, Jester King Craft Brewery is an authentic farmhouse brewery committed to brewing artisan ales of great depth and character. At times drawing influences from the world beyond traditional brewers’ yeast, Jester King’s beer is not rushed to market but allowed to mature – often in oak barrels – to create the most enjoyable, interesting and exciting beer we can make. An additional layer of complexity is added to Jester King’s bottled beers by allowing a second fermentation to take place in the bottle. As part of its commitment to sustainability, the slow food movement and Texas, Jester King beer uses as many organic and local ingredients as possible and will soon be brewed with harvested rainwater.",
     rating: 4.0
     })
+
+logo5 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BreweryLogos/jesterkingbrewing.png')
+brewery5.logo.attach(io: logo5, filename: 'jesterkingbrewing.png')
+
 brewery6 = Brewery.create!({
     name: "Allagash Brewing Company",
     address: "50 Industrial Way 04103",
@@ -74,6 +99,10 @@ brewery6 = Brewery.create!({
     description: "Founded in Portland, Maine, by Rob Tod, Allagash Brewing Company is dedicated to crafting the best Belgian-inspired beers in the world. Since 1995, Allagash has been a proud resident of Portland, and loves giving back to the community—and state—that has supported it along the way. Allagash currently stands as one of the Top 50 Craft Breweries in the U.S. (by sales volume) and loves to experiment in barrel-aged and spontaneously fermented beers. A portion of the proceeds from all Allagash beers goes back to organizations that help make our great state of Maine even better.",
     rating: 3.9
     })
+
+logo6 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BreweryLogos/allagashbrewing.jpg')
+brewery6.logo.attach(io: logo6, filename: 'allagashbrewing.jpg')
+
 brewery7 = Brewery.create!({
     name: "Sierra Nevada Brewing Co.",
     address: "1075 E 20th St 95928",
@@ -83,6 +112,10 @@ brewery7 = Brewery.create!({
     description: "In 1980, Ken Grossman built a small brewery in the city of Chico, California. To this day, premium ingredients and time-honored brewing techniques make Sierra Nevada ales and lagers truly exceptional beers.",
     rating: 3.7
     })
+
+logo7 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BreweryLogos/sierranevadabrewing.png')
+brewery7.logo.attach(io: logo7, filename: 'sierranevadabrewing.png')
+
 brewery8 = Brewery.create!({
     name: "Sante Adairius Rustic Ales",
     address: "103 Kennedy Dr 95010",
@@ -92,6 +125,10 @@ brewery8 = Brewery.create!({
     description: "Sante Adairius Rustic Ales is a small, but daring, brewery located in the coastal city of Capitola, CA, just south of Santa Cruz. Sante Adairius is a brewery founded on respect for quality and authenticity. We focus our attention on producing well-constructed beers with an eye towards simplicity and character. SARA takes liberty in emulating those memorable beers, their brewers, and the experiences they foster, never forgetting those giants on whose shoulders we stand. Our approach to beer making is one of whimsy, highly inspired by the Belgian tradition, but also in harmony with brewers all over the world who push against boundaries of style with a nudge, not a shove. Often our beers are barrel-aged, usually in wine barrels, with various yeast and bacteria. As often as not though, Sante Adairius brews beers more approachable and traditional in nature, yet no less flavorful or distinctive. Owned and operated by us, Adair Paterno and Tim Clifford, Sante Adairius Rustic Ales is our attempt to bring people together over great beer. SARA is an expression of our many years of beer geekery, the rabbit hole of tasting every beer we could get our hands on, and trusting we could contribute to the canon of those beers of the highest esteem. We believe great beer comes first. We stay true to our brewing roots. We take seriously the fact that we are brewing for you, and for ourselves. We appreciate your interest in our efforts. Sante!",
     rating: 4.3
     })
+
+logo8 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BreweryLogos/santeadairiusbrewing.png')
+brewery8.logo.attach(io: logo8, filename: 'santeadairiusbrewing.png')
+
 brewery9 = Brewery.create!({
     name: "Trumer Brewery",
     address: "1404 Fourth St 94710",
@@ -101,6 +138,10 @@ brewery9 = Brewery.create!({
     description: "Over 400 years ago, a small, family-owned craft brewery in Austria began a mission to brew one beer, perfectly. With the soft water of the Alpine streams and one-of-a-kind Saaz noble hops nearby, the pilsner style was a natural choice. The brewery worked for hundreds of years perfecting its craft, and eventually, Trumer Pils was born. With its perfect head of foam, enticing aroma, vigorous carbonation and crisp finish, Trumer Pils is the definition of a great pilsner. When a group of American craft brewers discovered this exquisite pilsner and wanted to bring it to the United States, they took the shipping process as seriously as the Austrians took their brewing. So in 2003, they didn't just ship a bottle to America, they shipped a brewery. Trumer become the first craft brewery to build a replica of a brewery in another country. Trumer Pils Berkeley now gives American craft beer lovers the chance to enjoy an authentic German-style pilsner the way it was meant to be: fresh! Tours are offered at Trumer Brewery in Berkeley, CA Monday through Friday at 3:15pm by reservation. Please email Tours@TrumerUSA.com or call 510.526.1160 for more information and to make a reservation. Prost!",
     rating: 3.5
     })
+
+logo9 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BreweryLogos/trumerbrewing.png')
+brewery9.logo.attach(io: logo9, filename: 'trumerbrewing.png')
+
 brewery10 = Brewery.create!({
     name: "Brouwerij Bosteels",
     address: "Hanenstraat 9255",
@@ -111,8 +152,15 @@ brewery10 = Brewery.create!({
     rating: 3.9
     })
 
+logo10 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BreweryLogos/bosteelsbrewing.jpg')
+brewery10.logo.attach(io: logo10, filename: 'bosteelbrewing.jpg')
 
-# Beers
+
+#########
+# Beers #
+#########
+
+
 beer1 = Beer.create!({
     name: "Reality Czech",
     brewery_id: brewery1.id,
