@@ -5,7 +5,7 @@ import { openModal } from '../../actions/modal_actions'
 
 const mSTP = ({session}) => {
     return{
-        currentUser: session.currentUser
+        currentUser: session
     };
 };
 

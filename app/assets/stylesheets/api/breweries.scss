@@ -1,0 +1,83 @@
+// Place all the styles related to the api/breweries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.brewery-index-container {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    background-color: #f5f2e8;
+}
+
+.brewery-index {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    align-self: center;
+    position: relative;
+    top: 60px;
+    background-color: #fff;
+    overflow: hidden;
+    border: left solid 2px #e2e2e2;
+
+}
+
+.brewery-name {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #c60;
+}
+
+.brewery-location {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    padding: 22px;
+    border-bottom: 1px solid #e2e2e2;
+    font-weight: 600;
+    font-size: 1.4em;
+    background-color: #f9f9f9;
+    width: 100%;
+    margin-left: 5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.breweries {
+    width: 90%;
+}
+
+.brewery-list-item {
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brewery-list-item-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.side-by-side {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.side-by-side h4 {
+    border-bottom: 2px solid #e2e2e2;
+}
+
+.brewery-list-item-right h4 {
+    border-left: 2px solid #e2e2e2;
+    padding: 4px;
+}
