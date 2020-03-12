@@ -2,14 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.brewery-index-container {
+.brewery-index-container, .brewery-show-container {
     display: flex;
     justify-content: center;
     height: auto;
     background-color: #f5f2e8;
 }
 
-.brewery-index {
+.brewery-index, .brewery-show {
     height: auto;
     display: flex;
     flex-direction: column;
@@ -96,3 +96,4 @@
     height: 60px;
     width: 60px;
 }
+

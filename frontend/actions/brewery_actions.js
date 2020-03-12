@@ -29,7 +29,7 @@ export const fetchBrewery = brewery => dispatch => {
     return APIUtil.fetchBrewery(brewery)
         .then(
             brewery => (dispatch(receiveBrewery(brewery))),
-            err => (dispatch(receiveErrors(err.responseJSON)))
+            // err => (dispatch(receiveErrors(err.responseJSON)))
         )
 };
 
@@ -37,7 +37,7 @@ export const fetchBreweries = () => dispatch => {
     return APIUtil.fetchBreweries()
         .then(
             breweries => (dispatch(receiveAllBreweries(breweries))),
-            err => (dispatch(receiveErrors(err.responseJSON)))
+            // err => (dispatch(receiveErrors(err.responseJSON)))
         )
 };
 

@@ -13,8 +13,10 @@ Beer.destroy_all
 Brewery.destroy_all
 User.destroy_all
 
+#########
+# Users #
+#########
 
-# Users
 demo_user = User.create!({
     username: "DemoUser",
     password: "password",

@@ -11,7 +11,7 @@ end
 json.beers do
     @brewery.beers.each do |beer|
         json.set! beer.id do
-            json.extract! beer, :id, :name
+            json.extract! beer, :id, :name, :style, :description, :abv, :ibu, :rating
         end
     end
 end

@@ -9,22 +9,28 @@ class BreweryIndex extends React.Component {
     }
 
     render(){
-        return(
-            <div className="brewery-index-container">
-                <section className="brewery-index">
-                    <h4 className="title" >Top Breweries</h4>
-                    <div className="breweries">
-                        {this.props.breweries.map((brewery=>(
-                        <BreweryIndexItem key={brewery.id} brewery={brewery} /> 
-                        )))}
-                    </div>
-                </section>
-                <footer>
+        if (!this.props.breweries) {
+            return null
+        } else {
 
-                </footer>
-            </div>
+            return(
+                <div className="brewery-index-container">
+                    <section className="brewery-index">
+                        <h4 className="title" >Top Breweries</h4>
+                        <div className="breweries">
+                            {this.props.breweries.map((brewery=>(
+                            <BreweryIndexItem key={brewery.id} brewery={brewery} fetchBrewery={this.props.fetchBrewery} /> 
+                            )))}
+                        </div>
+                    </section>
+                    <footer>
 
-        )
+                    </footer>
+                </div>
+
+            )
+
+        }
     }
 }
 

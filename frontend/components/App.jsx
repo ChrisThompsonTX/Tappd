@@ -1,9 +1,10 @@
 import React from "react";
 import GreetingContainer from "./greeting/greeting_container";
 import { Route } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashContainer from './splash/splash_page_container'
 import BreweryIndexContainer from './brewery_index/brewery_index_container'
+import BreweryShowContainer from './brewery_show/brewery_show_container'
 // import Modal from './modal/modal';
 
 const App = () => (
@@ -11,10 +12,10 @@ const App = () => (
         <header>
             <GreetingContainer />
         </header>
-        <Route exact path="/" component={SplashContainer} />
+        <AuthRoute exact path="/" component={SplashContainer} />
         {/* <AuthRoute path="/home" component={HomeContainer} /> */}
-        <Route path="/home" component={BreweryIndexContainer}/>
-        {/* <Route path="/:breweryId" component={BreweryShowContainer} /> */}
+        <ProtectedRoute path="/home" component={BreweryIndexContainer}/>
+        <ProtectedRoute path="/brewery/:breweryId" component={BreweryShowContainer} />
     </div>
 );
 

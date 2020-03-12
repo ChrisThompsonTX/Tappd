@@ -4,28 +4,35 @@ import BreweryShowItem from './brewery_show_item';
 
 class BreweryShow extends React.Component {
 
-    // componentDidMount() {
-    //     this.props.fetchBreweries()
-    // }
+    componentDidMount() {
+        // debugger
+        this.props.fetchBrewery(this.props.match.params.breweryId)
+    }
 
-    // render() {
-    //     return (
-    //         <div className="brewery-index-container">
-    //             <section className="brewery-index">
-    //                 <h4 className="title" >Top Breweries</h4>
-    //                 <div className="breweries">
-    //                     {this.props.breweries.map((brewery => (
-    //                         <BreweryIndexItem key={brewery.id} brewery={brewery} />
-    //                     )))}
-    //                 </div>
-    //             </section>
-    //             <footer>
+    render() {
+        // debugger
+        if (!this.props.brewery.beers)  {
+            return null
+        } else {
+            return (
+                <div className="brewery-show-container">
+                    <section className="brewery-show">
+                        <header>
+                            <h2>{this.props.brewery.name}</h2>
+                        </header>
+                        <div>
+                            {Object.values(this.props.brewery.beers).map((beer)=>(
+                                <BreweryShowItem key={beer.id} beer={beer} />
+                            ))}
+                        </div>
+                    </section>
+                    <footer>
 
-    //             </footer>
-    //         </div>
-
-    //     )
-    // }
+                    </footer>
+                </div>
+            )
+        }
+    }
 }
 
 export default BreweryShow;

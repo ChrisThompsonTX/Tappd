@@ -6,7 +6,7 @@ const breweriesReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_SINGLE_BREWERY:
-            return { [action.bench.id]: action.bench};
+            return { [action.brewery.id]: action.brewery};
         case DELETE_BREWERY:
             delete nextState[action.breweryId]
             return nextState;
