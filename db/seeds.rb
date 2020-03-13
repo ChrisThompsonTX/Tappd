@@ -172,6 +172,10 @@ beer1 = Beer.create!({
     abv: 4.8,
     ibu: 0
     })
+
+label1 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Moonlight-RealityCzech.jpg')
+beer1.label.attach(io: label1, filename: 'Moonlight-RealityCzech.jpg')
+
 beer2 = Beer.create!({
     name: "Death & Taxes",
     brewery_id: brewery1.id,
@@ -181,6 +185,11 @@ beer2 = Beer.create!({
     abv: 5,
     ibu: 0
     })
+
+label2 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Moonlight-DeathAndTaxes.png')
+beer2.label.attach(io: label2, filename: 'Moonlight-DeathAndTaxes.jpg')
+
+
 beer3 = Beer.create!({
     name: "Seizon Bretta",
     brewery_id: brewery2.id,
@@ -190,6 +199,10 @@ beer3 = Beer.create!({
     abv: 8,
     ibu: 35
     })
+
+label3 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Logsdon-SeizonBretta.jpeg')
+beer3.label.attach(io: label3, filename: 'Logsdon-SeizonBretta.jpeg')
+
 beer4 = Beer.create!({
     name: "Peche 'n Brett",
     brewery_id: brewery2.id,
@@ -199,6 +212,10 @@ beer4 = Beer.create!({
     abv: 10,
     ibu: 0
     })
+
+label4 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Logsdon-PecheNBrett.jpeg')
+beer4.label.attach(io: label4, filename: 'Logsdon-PecheNBrett')
+
 beer5 = Beer.create!({
     name: "STS Pils",
     brewery_id: brewery3.id,
@@ -208,6 +225,10 @@ beer5 = Beer.create!({
     abv: 5.3,
     ibu: 33
     })
+
+label5 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/RussianRiver-STSPils.jpeg')    
+beer5.label.attach(io: label5, filename: 'RussianRiver-STSPils.jpeg')
+
 beer6 = Beer.create!({
     name: "Blind Pig IPA",
     brewery_id: brewery3.id,
@@ -217,6 +238,10 @@ beer6 = Beer.create!({
     abv: 6.1,
     ibu: 70
     })
+
+label6 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/RussianRiver-BlindPig.jpg')    
+beer6.label.attach(io: label6, filename: 'RussianRiver-BlindPig.jpg')
+
 beer7 = Beer.create!({
     name: "Supplication",
     brewery_id: brewery3.id,
@@ -226,15 +251,23 @@ beer7 = Beer.create!({
     abv: 7.75,
     ibu: 10
     })
+
+label7 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/RussianRiver-Supplication.png')
+beer7.label.attach(io: label7, filename: 'RussianRiver-Supplication.png')
+
 beer8 = Beer.create!({
-    name: "Supplication",
+    name: "Temptation",
     brewery_id: brewery3.id,
     style: "American Wild Ale",
     rating: 4.3,
-    description: "Brown ale aged in Pinot Noir wine barrels for one year with sour cherries, Brettanomyces yeast, and Lactobacillus & Pedicoccus bacteria.",
-    abv: 7.75,
-    ibu: 10
+    description: "Blonde Ale aged in used Chardonnay barrels from local Sonoma County wineries. It is aged for about 9 to 15 months (depending on the age of the barrel) with lots of brettanomyces, lactobacillus, and pediococcus added to each barrel. Medium bodied with hints of oak and Chardonnay, funky brett characteristics, with a nice, long sour finish.",
+    abv: 7.5,
+    ibu: 0
     })
+
+label8 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/RussianRiver-Temptation.jpg')
+beer8.label.attach(io: label8, filename: 'RussianRiver-Temptation.jpg')
+
 beer9 = Beer.create!({
     name: "Pliny the Elder",
     brewery_id: brewery3.id,
@@ -244,6 +277,10 @@ beer9 = Beer.create!({
     abv: 8,
     ibu: 100
     })
+
+label9 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/RussianRiver-PlinyTheElder.jpg')
+beer9.label.attach(io: label9, filename: 'RussianRiver-PlinyTheElder.jpg')
+
 beer10 = Beer.create!({
     name: "Beatification",
     brewery_id: brewery3.id,
@@ -253,6 +290,10 @@ beer10 = Beer.create!({
     abv: 6,
     ibu: 0
     })
+
+label10 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/RussianRiver-Beatification.png')
+beer10.label.attach(io: label10, filename: 'RussianRiver-Beatification.png')
+
 beer11 = Beer.create!({
     name: "Consecration",
     brewery_id: brewery3.id,
@@ -262,6 +303,10 @@ beer11 = Beer.create!({
     abv: 10,
     ibu: 0
     })
+
+label11 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/RussianRiver-Consecration.jpg')
+beer11.label.attach(io: label11, filename: 'RussianRiver-Consecration.jpg')
+
 beer12 = Beer.create!({
     name: "Bony Fingers",
     brewery_id: brewery1.id,
@@ -271,6 +316,10 @@ beer12 = Beer.create!({
     abv: 6.2,
     ibu: 0
     })
+
+label12 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Moonlight-BonyFingers.jpg')
+beer12.label.attach(io: label12, filename: 'Moonlight-BonyFingers.jpg')
+
 beer13 = Beer.create!({
     name: "Leifer: 2017 Harvest",
     brewery_id: brewery4.id,
@@ -280,6 +329,10 @@ beer13 = Beer.create!({
     abv: 5.2,
     ibu: 0
     })
+
+label13 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/SuarezFamily-Leifer.png')
+beer13.label.attach(io: label13, filename: 'SuarerzFamily-Leifer.png')
+
 beer14 = Beer.create!({
     name: "Call To Mind",
     brewery_id: brewery4.id,
@@ -289,6 +342,10 @@ beer14 = Beer.create!({
     abv: 5.4,
     ibu: 0
     })
+
+label14 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/SuarezFamily-CallToMind.png')
+beer14.label.attach(io: label14, filename: 'SuarezFamily-CallToMind.png')
+
 beer15 = Beer.create!({
     name: "Whistlin'",
     brewery_id: brewery4.id,
@@ -298,6 +355,10 @@ beer15 = Beer.create!({
     abv: 5.6,
     ibu: 0
     })
+
+label15 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/SuarezFamily-Whistlin.png')
+beer15.label.attach(io: label15, filename: 'SuarezFamily-Whistlin')
+
 beer16 = Beer.create!({
     name: "Palatine Pils",
     brewery_id: brewery4.id,
@@ -307,6 +368,10 @@ beer16 = Beer.create!({
     abv: 4.8,
     ibu: 0
     })
+
+label16 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/SuarezFamily-PalatinePils.jpeg')
+beer16.label.attach(io: label16, filename: 'SuarezFamily-PalatinePils.jpeg')
+
 beer17 = Beer.create!({
     name: "Qualify Pils",
     brewery_id: brewery4.id,
@@ -316,6 +381,10 @@ beer17 = Beer.create!({
     abv: 5.0,
     ibu: 0
     })
+
+label17 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/SuarezFamily-QualifyPils.jpeg')
+beer17.label.attach(io: label17, filename: 'SuarezFamily-QualifyPils.jpeg')
+
 beer18 = Beer.create!({
     name: "Crispy Little",
     brewery_id: brewery4.id,
@@ -325,6 +394,10 @@ beer18 = Beer.create!({
     abv: 4.6,
     ibu: 0
     })
+
+label18 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/SuarezFamily-CrispyLittle.jpg')
+beer18.label.attach(io: label18, filename: 'SuarezFamily-CrispyLittle.jpg')
+
 beer19 = Beer.create!({
     name: "Homespun",
     brewery_id: brewery4.id,
@@ -334,6 +407,10 @@ beer19 = Beer.create!({
     abv: 4.5,
     ibu: 0
     })
+
+label19 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/SuarezFamily-Homespun.png')
+beer19.label.attach(io: label19, filename: 'SuarezFamily-Homespun.png')
+
 beer20 = Beer.create!({
     name: "Le Petit Prince",
     brewery_id: brewery5.id,
@@ -343,6 +420,10 @@ beer20 = Beer.create!({
     abv: 2.9,
     ibu: 30
     })
+
+label20 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/JesterKing-LePetitPrince.png')
+beer20.label.attach(io: label20, filename: 'JesterKing-LePetitPrince.png')
+
 beer21 = Beer.create!({
     name: "Das Wunderkind!",
     brewery_id: brewery5.id,
@@ -352,6 +433,10 @@ beer21 = Beer.create!({
     abv: 4.5,
     ibu: 0
     })
+
+label21 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/JesterKing-DasWunderkind.png')
+beer21.label.attach(io: label21, filename: 'JesterKing-DasWunderkind.png')
+
 beer22 = Beer.create!({
     name: "Funk Metal",
     brewery_id: brewery5.id,
@@ -361,6 +446,10 @@ beer22 = Beer.create!({
     abv: 8.2,
     ibu: 60
     })
+
+label22 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/JesterKing-FunkMetal.png')
+beer22.label.attach(io: label22, filename: 'JesterKing-FunkMetal.png')
+
 beer23 = Beer.create!({
     name: "Atrial Rubicite",
     brewery_id: brewery5.id,
@@ -370,6 +459,10 @@ beer23 = Beer.create!({
     abv: 5.8,
     ibu: 0
     })
+
+label23 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/JesterKing-AtrialRubicite.png')
+beer23.label.attach(io: label23, filename: 'JesterKing-AtrialRubicite.png')
+
 beer24 = Beer.create!({
     name: "Commercial Suicide",
     brewery_id: brewery5.id,
@@ -379,6 +472,10 @@ beer24 = Beer.create!({
     abv: 3.5,
     ibu: 0
     })
+
+label24 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/JesterKing-CommercialSuicide.png')
+beer24.label.attach(io: label24, filename: 'JesterKing-CommercialSuicide.png')
+
 beer25 = Beer.create!({
     name: "Moderne Dansk",
     brewery_id: brewery5.id,
@@ -388,6 +485,10 @@ beer25 = Beer.create!({
     abv: 7.1,
     ibu: 0
     })
+
+label25 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/JesterKing-ModerneDansk.jpeg')
+beer25.label.attach(io: label25, filename: 'JesterKing-ModerneDansk.jpeg')
+
 beer26 = Beer.create!({
     name: "RU55",
     brewery_id: brewery5.id,
@@ -397,6 +498,10 @@ beer26 = Beer.create!({
     abv: 6.7,
     ibu: 0
     })
+
+label26 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/JesterKingRU55.png')
+beer26.label.attach(io: label26, filename: 'JesterKingRU55.png')
+
 beer27 = Beer.create!({
     name: "Bière de Blanc du Bois",
     brewery_id: brewery5.id,
@@ -406,6 +511,10 @@ beer27 = Beer.create!({
     abv: 6.7,
     ibu: 0
     })
+
+label27 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/JesterKing-BiereDeBlancDuBois.gif')
+beer27.label.attach(io: label27, filename: 'JesterKing-BiereDeBlancDuBois.gif')
+
 beer28 = Beer.create!({
     name: "Curieux",
     brewery_id: brewery6.id,
@@ -415,6 +524,10 @@ beer28 = Beer.create!({
     abv: 10.4,
     ibu: 27
     })
+
+label28 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Allagash-Curieux.jpeg')
+beer28.label.attach(io: label28, filename: 'Allagash-Curieux.jpeg')
+
 beer29 = Beer.create!({
     name: "White",
     brewery_id: brewery6.id,
@@ -424,6 +537,10 @@ beer29 = Beer.create!({
     abv: 5.2,
     ibu: 13
     })
+
+label29 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Allagash-White.jpeg')
+beer29.label.attach(io: label29, filename: 'Allagash-White.jpeg')
+
 beer30 = Beer.create!({
     name: "Mattina Rossa",
     brewery_id: brewery6.id,
@@ -433,6 +550,10 @@ beer30 = Beer.create!({
     abv: 6.9,
     ibu: 0
     })
+
+label30 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Allagash-MattinaRossa.webp')
+beer30.label.attach(io: label30, filename: 'Allagash-MattinaRossa.webp')
+
 beer31 = Beer.create!({
     name: "Coolship Red",
     brewery_id: brewery6.id,
@@ -442,6 +563,10 @@ beer31 = Beer.create!({
     abv: 6.7,
     ibu: 0
     })
+
+label31 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Allagash-CoolshipRed.jpg')
+beer31.label.attach(io: label31, filename: 'Allagash-CoolshipRed.jpg')
+
 beer32 = Beer.create!({
     name: "Farm To Face",
     brewery_id: brewery6.id,
@@ -451,6 +576,10 @@ beer32 = Beer.create!({
     abv: 6.3,
     ibu: 0
     })
+
+label32 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Allagash-FarmToFace.jpg')
+beer32.label.attach(io: label32, filename: 'Allagash-FarmToFace.jpg')
+
 beer33 = Beer.create!({
     name: "Pale Ale",
     brewery_id: brewery7.id,
@@ -460,6 +589,10 @@ beer33 = Beer.create!({
     abv: 5.6,
     ibu: 38
     })
+
+label33 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/SierraNevada-PaleAle.png')
+beer33.label.attach(io: label33, filename: 'SierraNevada-PaleAle')
+
 beer34 = Beer.create!({
     name: "Celebration Fresh Hop IPA",
     brewery_id: brewery7.id,
@@ -469,6 +602,10 @@ beer34 = Beer.create!({
     abv: 6.8,
     ibu: 65
     })
+
+label34 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/SierraNevada-Celebration.jpg')
+beer34.label.attach(io: label34, filename: 'SierraNevada-Celebration.jpg')
+
 beer35 = Beer.create!({
     name: "Narwhal Imperial Stout",
     brewery_id: brewery7.id,
@@ -478,6 +615,10 @@ beer35 = Beer.create!({
     abv: 10.2,
     ibu: 60
     })
+
+label35 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/SierraNevada-Narwhal.png')
+beer35.label.attach(io: label35, filename: 'SierraNevada-Narwhal.png')
+
 beer36 = Beer.create!({
     name: "Ruthless",
     brewery_id: brewery7.id,
@@ -487,6 +628,10 @@ beer36 = Beer.create!({
     abv: 6.6,
     ibu: 55
     })
+
+label36 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/SierraNevada-Rusthless.png')    
+beer36.label.attach(io: label36, filename: 'SierraNevada-Ruthless.png')
+
 beer37 = Beer.create!({
     name: "Saison Bernice",
     brewery_id: brewery8.id,
@@ -496,6 +641,10 @@ beer37 = Beer.create!({
     abv: 6.5,
     ibu: 0
     })
+
+label37 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Sante-SaisonBernice.jpg')
+beer37.label.attach(io: label37, filename: 'Sante-SaisonBernice.jpg')
+
 beer38 = Beer.create!({
     name: "West Ashley",
     brewery_id: brewery8.id,
@@ -505,6 +654,10 @@ beer38 = Beer.create!({
     abv: 7.3,
     ibu: 0
     })
+
+label38 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Sante-WestAshley.jpg')
+beer38.label.attach(io: label38, filename: 'Sante-WestAshley.jpg')
+
 beer39 = Beer.create!({
     name: "Tomorrow, Today",
     brewery_id: brewery8.id,
@@ -514,6 +667,10 @@ beer39 = Beer.create!({
     abv: 7.4,
     ibu: 30
     })
+
+label39 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Sante-TomorrowToday.png')
+beer39.label.attach(io: label39, filename: 'Sante-TomorrowToday.png')
+
 beer40 = Beer.create!({
     name: "Southern Sunrise",
     brewery_id: brewery8.id,
@@ -523,6 +680,10 @@ beer40 = Beer.create!({
     abv: 7.6,
     ibu: 0
     })
+
+label40 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Sante-SouthernSunrise.png')
+beer40.label.attach(io: label40, filename: 'Sante-SouthernSunrise.png')
+
 beer41 = Beer.create!({
     name: "Trumer Pils",
     brewery_id: brewery9.id,
@@ -532,6 +693,10 @@ beer41 = Beer.create!({
     abv: 4.9,
     ibu: 26
     })
+
+label41 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Trumer-TrumerPils.jpeg')
+beer41.label.attach(io: label41, filename: 'Trumer-TrumerPils.jpeg')
+
 beer42 = Beer.create!({
     name: "Tripel Karmeliet",
     brewery_id: brewery10.id,
@@ -541,6 +706,10 @@ beer42 = Beer.create!({
     abv: 8.4,
     ibu: 16
     })
+
+label42 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Bosteels-TripelKarmeliet.jpg')
+beer42.label.attach(io: label42, filename: 'Bosteels-TripelKarmeliet.jpg')
+
 beer43 = Beer.create!({
     name: "Pauwel Kwak",
     brewery_id: brewery10.id,
@@ -550,6 +719,10 @@ beer43 = Beer.create!({
     abv: 8.4,
     ibu: 0
     })
+
+label43 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Bosteels-Kwak.webp')
+beer43.label.attach(io: label43, filename: 'Bosteels-Kwak.webp')
+
 beer44 = Beer.create!({
     name: "DeuS (Brut des Flandres)",
     brewery_id: brewery10.id,
@@ -559,6 +732,9 @@ beer44 = Beer.create!({
     abv: 11.5,
     ibu: 11
     })
+
+label44 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Bosteels-Deus.png')
+beer44.label.attach(io: label44, filename: 'Bosteels-Deus.png')
 
 
 # Reviews

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_10_180204) do
+ActiveRecord::Schema.define(version: 2020_03_12_181658) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2020_03_10_180204) do
     t.string "name", null: false
     t.integer "brewery_id", null: false
     t.string "style", null: false
-    t.integer "rating", null: false
+    t.float "rating", null: false
     t.string "description", null: false
     t.integer "abv", null: false
     t.integer "ibu", null: false
@@ -54,14 +54,14 @@ ActiveRecord::Schema.define(version: 2020_03_10_180204) do
     t.string "state"
     t.string "country", null: false
     t.string "description", null: false
-    t.integer "rating", null: false
+    t.float "rating", null: false
     t.integer "lat"
     t.integer "lng"
     t.index ["name"], name: "index_breweries_on_name"
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "rating", null: false
+    t.float "rating", null: false
     t.string "body", null: false
     t.integer "beer_id", null: false
     t.integer "user_id", null: false

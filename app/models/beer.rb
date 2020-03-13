@@ -21,4 +21,6 @@ class Beer < ApplicationRecord
     through: :reviews,
     source: :user
 
+  has_one_attached :label
+
 end
