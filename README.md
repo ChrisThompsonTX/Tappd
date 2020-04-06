@@ -17,7 +17,7 @@ TAPPD is a social media app focused on logging, rating, and sharing reviews of b
 - User auth errors are separated and displayed over the proper field
 - Breweries are displayed in a list as links to a page displaying all their beers
 
-![alt text](tappd/app/assets/images/UserAuthErrors.png "User Auth Errors")
+![alt text](https://tappd-seeds.s3-us-west-1.amazonaws.com/UserAuthErrors.png "User Auth Errors")
 ### User Auth Errors
 - In order to pass errors to correct field, I parsed each error individually from the controller to be separated later into individual stylized errors.
 
