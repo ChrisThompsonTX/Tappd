@@ -1,25 +1,30 @@
-# README
+# TAPPD
+TAPPD is a social media app focused on logging, rating, and sharing reviews of beers and breweries inspired by [Untappd](https://untappd.com/). Tappd can also be used to research new beers and breweries.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Checkout [Tappd Live](https://tappd-ct.herokuapp.com/#/)!
 
-Things you may want to cover:
+### Backend
+- Ruby 2.5.1
+- Rails 5.2.4.1
+- PostgreSQL
+### Frontend
+- React
+- Redux
+- JavaScript ES6
 
-* Ruby version
+## Features
+- Secure User Authorization using BCrypt hashing
+- User auth errors are separated and displayed over the proper field
+- Breweries are displayed in a list as links to a page displaying all their beers
 
-* System dependencies
+![alt text](/tappd/app/assets/images/UserAuthErrors.png "User Auth Errors")
+### User Auth Errors
+- In order to pass errors to correct field, I parsed each error individually from the controller to be separated later into individual stylized errors.
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# Tappd
+### Future Features
+In the future I would like to add:
+- A from to create a new brewery, beer, and review
+- A feed of the newest reviews and comments
+- A like system so that you can like other users reviews
+- The ability to search through breweries, beers, and users
