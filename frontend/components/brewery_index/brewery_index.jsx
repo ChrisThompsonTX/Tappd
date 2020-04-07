@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BreweryIndexItem from './brewery_index_item';
+import './brewery_index.css';
 
 class BreweryIndex extends React.Component {
 

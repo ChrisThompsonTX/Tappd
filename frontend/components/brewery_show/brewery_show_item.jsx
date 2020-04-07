@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Rating from '../brewery_index/rating'
 
 class BreweryShowItem extends React.Component {
     render(){
@@ -16,7 +17,7 @@ class BreweryShowItem extends React.Component {
                 <div className="beer-container-bottom">
                     <h4>{this.props.beer.abv} % ABV</h4>
                     <h4>{this.props.beer.ibu} IBU</h4>
-                    <h4>{this.props.beer.rating}</h4>
+                    <h4><div className="rating-container" ><Rating rating={this.props.beer.rating} /></div></h4>
                     <h4>{this.props.beer.reviewIds.length}</h4>
                 </div>
             </div>

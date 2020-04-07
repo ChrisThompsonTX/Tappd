@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Rating from './rating';
 
 class BreweryIndexItem extends React.Component {
 
@@ -24,7 +25,7 @@ class BreweryIndexItem extends React.Component {
                         <h4>{this.props.brewery.reviewIds.length} Reviews</h4>
                     </div>
                     <div>
-                        <h4>{this.props.brewery.rating}</h4>
+                        <div className="rating-container" ><Rating rating={this.props.brewery.rating}/></div>
                     </div>
                 </div>
             </div>
