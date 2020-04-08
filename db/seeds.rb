@@ -23,6 +23,9 @@ demo_user = User.create!({
     email: "demo@demo.demo"
     })
 
+photo0 = open('')
+demo_user.profile_photo.attach(io: photo0, filename: '')
+
 #############   
 # Breweries #
 #############
@@ -736,5 +739,51 @@ beer44 = Beer.create!({
 label44 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/Bosteels-Deus.png')
 beer44.label.attach(io: label44, filename: 'Bosteels-Deus.png')
 
+###########
+# Reviews #
+###########
 
-# Reviews
+review1 = Review.create!({
+    rating: 0.0,
+    body: "",
+    beer_id: beer1.id,
+    user_id: 0
+    })
+
+review2 = Review.create!({
+    rating: 0.0,
+    body: "",
+    beer_id: 0,
+    user_id: 0
+    })
+
+review3 = Review.create!({
+    rating: 0.0,
+    body: "",
+    beer_id: 0,
+    user_id: 0
+    })
+
+review4 = Review.create!({
+    rating: 0.0,
+    body: "",
+    beer_id: 0,
+    user_id: 0
+    })
+
+review5 = Review.create!({
+    rating: 0.0,
+    body: "",
+    beer_id: 0,
+    user_id: 0
+    })
+
+review6 = Review.create!({
+    rating: 0.0,
+    body: "",
+    beer_id: 0,
+    user_id: 0
+    })
+
+    
+    

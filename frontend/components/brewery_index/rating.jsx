@@ -42,6 +42,7 @@ const Rating = (props) => {
     return (
         <div className="rating">
             {starDiv}
+            <h2>({props.rating}/5)</h2>
         </div>
     )
 }

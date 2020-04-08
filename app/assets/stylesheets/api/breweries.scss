@@ -2,14 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.brewery-index-container, .brewery-show-container {
+.brewery-index-container, .brewery-show-container, .beer-show-container {
     display: flex;
-    justify-content: center;
-    height: auto;
+    justify-content: flex-start;
+    height: 100vh;
     background-color: #f5f2e8;
+    flex-direction: column;
+    overflow: auto;
 }
 
-.brewery-index, .brewery-show {
+.brewery-index, .brewery-show, .beer-show {
     height: auto;
     display: flex;
     flex-direction: column;
@@ -17,11 +19,10 @@
     width: 50%;
     align-self: center;
     position: relative;
-    top: 60px;
+    top: 8vh;
     background-color: #fff;
-    overflow: hidden;
     border: left solid 2px #e2e2e2;
-
+    padding: 3vh;
 }
 
 .brewery-name, .beer-name {

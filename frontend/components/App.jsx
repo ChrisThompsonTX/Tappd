@@ -5,6 +5,8 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashContainer from './splash/splash_page_container'
 import BreweryIndexContainer from './brewery_index/brewery_index_container'
 import BreweryShowContainer from './brewery_show/brewery_show_container'
+import BeerShowContainer from './beer/beer_show_container'
+
 // import Modal from './modal/modal';
 
 const App = () => (
@@ -16,6 +18,7 @@ const App = () => (
         {/* <AuthRoute path="/home" component={HomeContainer} /> */}
         <ProtectedRoute path="/home" component={BreweryIndexContainer}/>
         <ProtectedRoute path="/brewery/:breweryId" component={BreweryShowContainer} />
+        <ProtectedRoute path="/beer/:beerId" component={BeerShowContainer} />
     </div>
 );
 

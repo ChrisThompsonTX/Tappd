@@ -9,7 +9,7 @@ class BreweryShowItem extends React.Component {
                 <div className="beer-container-top">
                     <img className="beer-label" src={this.props.beer.label}/>
                     <div className="beer-info">
-                        <Link className="beer-name" to='/'>{this.props.beer.name}</Link>
+                        <Link className="beer-name" to={`/beer/${this.props.beer.id}`}>{this.props.beer.name}</Link>
                         <h3>{this.props.beer.style}</h3>
                         <h4>{this.props.beer.description}</h4>
                     </div>

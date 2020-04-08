@@ -4,3 +4,9 @@
     align-items: center;
     padding: .8vh 0;
 }
+
+.rating h2 {
+    font-size: .8em;
+    color: #999;
+    padding-left: .5vw;
+}

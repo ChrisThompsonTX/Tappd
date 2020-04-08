@@ -15,7 +15,7 @@ const reviewsReducer = (state = {}, action) => {
             delete nextState[reviewId]
             return nextState;
         case RECEIVE_SINGLE_BEER:
-            return action.beer.reviews;
+            return action.beer.reviewIds;
         case RECEIVE_SINGLE_BREWERY:
             return action.brewery.reviewIds;
         default:
