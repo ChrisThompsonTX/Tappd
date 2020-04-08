@@ -22,7 +22,6 @@
     top: 8vh;
     background-color: #fff;
     border: left solid 2px #e2e2e2;
-    padding: 3vh;
 }
 
 .brewery-name, .beer-name {
@@ -39,17 +38,21 @@
 
 .title {
     padding: 22px;
-    border-bottom: 1px solid #e2e2e2;
     font-weight: 600;
     font-size: 1.4em;
-    background-color: #f9f9f9;
     width: 100%;
-    margin-left: 5%;
     font-family: 'Poppins', sans-serif;
+}
+
+.title-box {
+    width: 100%;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e2e2e2;
 }
 
 .breweries {
     width: 90%;
+    padding: 2vw 3vw 0 3vw;
 }
 
 .brewery-list-item {
@@ -116,7 +119,7 @@
 
 .brewery-header-inner {
     width: 90%;
-
+    padding-top: 2vw;
 }
 
 .beer-label {

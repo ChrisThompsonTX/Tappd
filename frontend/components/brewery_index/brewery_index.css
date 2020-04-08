@@ -10,3 +10,22 @@
     color: #999;
     padding-left: .5vw;
 }
+
+.modal-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-button {
+    cursor: pointer;
+    padding: 1vw 0;
+    background-color: #fc0;
+    color: white;
+    width: 90%;
+    font-size: 1.2em;
+    margin: 2vw 0;
+    font-weight: bold;
+    border: 1px solid lightgrey;
+}

@@ -2,12 +2,37 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BreweryShowItem from './brewery_show_item';
 import Rating from '../brewery_index/rating';
+import BeerModal from './beer_modal'
 
 class BreweryShow extends React.Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      openModal: false
+    }
+
+    this.handleModal = this.handleModal.bind(this);
+  }
+
   componentDidMount() {
     this.props.fetchBrewery(this.props.match.params.breweryId)
+    // this.props.fetchBreweries()
+    // console.log(this.props)
   }
+
+  handleModal(e) {
+    e.preventDefault();
+    if (this.state.openModal === false) {
+      this.setState({
+        openModal: true
+      })
+    } else {
+      this.setState({
+        openModal: false
+      })
+    }
+  };
 
   render() {
     if (!this.props.brewery || !this.props.brewery.beers)  {
@@ -44,10 +69,18 @@ class BreweryShow extends React.Component {
                 <BreweryShowItem key={beer.id} beer={beer} />
               ))}
             </div>
+            <div className="modal-container">
+              <button className="modal-button" onClick={this.handleModal}>ADD A BEER +</button>
+            </div>
           </section>
           <footer>
 
           </footer>
+          {this.state.openModal === true ? 
+            <BeerModal 
+              handleModal={this.handleModal} 
+              createBeer={this.props.createBeer}
+              /> : null}
         </div>
       )
     }
