@@ -7,5 +7,5 @@ json.extract! beer,
     :description,
     :abv,
     :ibu,
-    :review_ids
+    :reviews
 json.label url_for(beer.label)

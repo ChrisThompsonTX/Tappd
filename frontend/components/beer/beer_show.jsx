@@ -8,6 +8,8 @@ class BeerShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchBeer(this.props.match.params.beerId)
+    this.props.fetchBreweries()
+    this.props.fetchUsers()
   }
 
   render() {
@@ -32,13 +34,13 @@ class BeerShow extends React.Component {
                   <h4>{this.props.beer.abv} % ABV</h4>
                   <h4>{this.props.beer.ibu} IBU</h4>
                   <h4><div className="rating-container" ><Rating rating={this.props.beer.rating} /></div></h4>
-                  <h4>{this.props.beer.reviewIds.length} Reviews</h4>
+                  {/* <h4>{this.props.beer.reviewIds.length} Reviews</h4> */}
                 </div>
               </div>
             </header>
             <section className="beer-show-review-container">
-              {this.props.beer.reviewIds.map((reviewId)=> {
-                <Review reviewId={reviewId}/>
+              {this.props.beer.reviews.map((review)=> {
+                <Review review={review} users={this.props.users} breweries={this.props.breweries} />
               })}
             </section>
           </div>

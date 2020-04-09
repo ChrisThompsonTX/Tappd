@@ -23,8 +23,54 @@ demo_user = User.create!({
     email: "demo@demo.demo"
     })
 
-photo0 = open('')
-demo_user.profile_photo.attach(io: photo0, filename: '')
+photo0 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ProfilePictures/Demo.jpeg')
+demo_user.profile_photo.attach(io: photo0, filename: 'Demo.jpeg')
+
+user1 = User.create!({
+    username: "BeerHunter",
+    password: "password",
+    email: "MJ@beer.hunter"
+    })
+
+photo1 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ProfilePictures/Michael.jpg')
+user1.profile_photo.attach(io: photo1, filename: 'Michael.jpg')
+
+user2 = User.create!({
+    username: "Nick C.",
+    password: "password",
+    email: "not@the.bees"
+    })
+
+photo2 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ProfilePictures/Nick.jpg')
+user2.profile_photo.attach(io: photo2, filename: 'Nick.jpg')
+
+user3 = User.create!({
+    username: "Randy S.",
+    password: "password",
+    email: "macho@man.randy"
+    })
+
+photo3 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ProfilePictures/Randy.jpg')
+user3.profile_photo.attach(io: photo3, filename: 'Randy.jpg')
+
+user4 = User.create!({
+    username: "Steve A.",
+    password: "password",
+    email: "stonecold@said.so"
+    })
+
+photo4 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ProfilePictures/SteveA.jpg')
+user4.profile_photo.attach(io: photo4, filename: 'SteveA.jpg')
+
+user5 = User.create!({
+    username: "Steve B.",
+    password: "password",
+    email: "hello@fellow.kids"
+    })
+
+photo5 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ProfilePictures/SteveB.jpg')
+user5.profile_photo.attach(io: photo5, filename: 'SteveB.jpg')
+
 
 #############   
 # Breweries #
@@ -744,46 +790,1232 @@ beer44.label.attach(io: label44, filename: 'Bosteels-Deus.png')
 ###########
 
 review1 = Review.create!({
-    rating: 0.0,
-    body: "",
+    rating: 4.25,
+    body: "Stellar exemplar of the style, even if it's in the states",
     beer_id: beer1.id,
-    user_id: 0
+    user_id: user1.id
     })
 
 review2 = Review.create!({
-    rating: 0.0,
-    body: "",
-    beer_id: 0,
-    user_id: 0
+    rating: 4.0,
+    body: "this is the beer I want when I want it done clean and clear. wish we had this on the east coast",
+    beer_id: beer1.id,
+    user_id: user3.id
     })
 
 review3 = Review.create!({
-    rating: 0.0,
-    body: "",
-    beer_id: 0,
-    user_id: 0
+    rating: 3.5,
+    body: "First of a flight. Crisp and light with pleasant hoppy hints.",
+    beer_id: beer1.id,
+    user_id: user4.id
     })
 
 review4 = Review.create!({
-    rating: 0.0,
-    body: "",
-    beer_id: 0,
-    user_id: 0
+    rating: 4.1,
+    body: "Light, wheaty malt body with bright, herbal hops. Moderate bitterness.",
+    beer_id: beer1.id ,
+    user_id: user2.id
     })
 
 review5 = Review.create!({
-    rating: 0.0,
-    body: "",
-    beer_id: 0,
-    user_id: 0
+    rating: 4.7,
+    body: "just the best beer",
+    beer_id: beer2.id,
+    user_id: user5.id
     })
 
 review6 = Review.create!({
-    rating: 0.0,
-    body: "",
-    beer_id: 0,
-    user_id: 0
+    rating: 5.0,
+    body: "Desert island beer. One of my all time favorites.",
+    beer_id: beer2.id,
+    user_id: user2.id
     })
 
-    
+review7 = Review.create!({
+    rating: 4.0,
+    body: "Nice and malty. A nice change of pace for California.",
+    beer_id: beer2.id,
+    user_id: user3.id
+    })
+
+review8 = Review.create!({
+    rating: 4.3,
+    body: "Really interesting and unique flavor",
+    beer_id: beer2.id,
+    user_id: user1.id
+    })
+
+review9 = Review.create!({
+    rating: 3.7,
+    body: "Clean and very drinkable.",
+    beer_id: beer3.id,
+    user_id: user4.id
+    })
+
+review10 = Review.create!({
+    rating: 3.9,
+    body: "Dry as a bone. Heh. Get it? Bone. Heh.",
+    beer_id: beer3.id,
+    user_id: user5.id
+    })
+
+review11 = Review.create!({
+    rating: 3.8,
+    body: "More roasted than Death and Taxes, too much so, for my taste. Otherwise faultless, though, so still decent.",
+    beer_id: beer3.id,
+    user_id: user3.id
+    })
+
+review12 = Review.create!({
+    rating: 4.0,
+    body: "Light and crisp with anspice accent. Banana tasting on the backside.",
+    beer_id: beer4.id,
+    user_id: user1.id
+    })
+
+review13 = Review.create!({
+    rating: 4.2,
+    body: "4.2 Held up nicely over the years, 6?",
+    beer_id: beer4.id,
+    user_id: user3.id
+    })
+
+review14 = Review.create!({
+    rating: 4.0,
+    body: "Great funk and flavoring.",
+    beer_id: beer4.id,
+    user_id: user4.id
+    })
+
+review15 = Review.create!({
+    rating: 4.2,
+    body: "nice low sour, quite dry, citrus, dried fruits, dry wood in aftertaste, very balanced.",
+    beer_id: beer4.id,
+    user_id: user5.id
+    })
+
+review16 = Review.create!({
+    rating: 3.3,
+    body: "Meh maybe just not my preference but not the best tasting ale I’ve had",
+    beer_id: beer4.id,
+    user_id: user2.id
+    })
+
+review17 = Review.create!({
+    rating: 4.2,
+    body: "2017 bottles. Chalky. Funky. Not as acidic as expected. Delicious",
+    beer_id: beer5.id,
+    user_id: user5.id
+    })
+
+review18 = Review.create!({
+    rating: 4.0,
+    body: "Classic wood funk and subdued resonance. Lightly sour, subtle fruit, somewhat dry. Very enjoyable.",
+    beer_id: beer5.id,
+    user_id: user4.id
+    })
+
+review19 = Review.create!({
+    rating: 4.5,
+    body: "Tart and bright up front with a mellow woody peach finish. Super delicious",
+    beer_id: beer5.id,
+    user_id: user2.id
+    })
+
+review20 = Review.create!({
+    rating: 4.0,
+    body: "Probably the best pilsner I've ever tried. Would drink again.",
+    beer_id: beer6.id,
+    user_id: user1.id
+    })
+
+review21 = Review.create!({
+    rating: 4.0,
+    body: "Criiiiissssspppppiiiiiiii Boi",
+    beer_id: beer6.id,
+    user_id: user5.id
+    })
+
+review22 = Review.create!({
+    rating: 4.1,
+    body: "Brought home from San Francisco, smooth/not typical Pilsner. Perfectly clear brew, presents a perfectly clean taste.",
+    beer_id: beer6.id,
+    user_id: user3.id
+    })
+
+review23 = Review.create!({
+    rating: 4.3,
+    body: "Solid pils for a rainy Sunday afternoon",
+    beer_id: beer6.id,
+    user_id: user4.id
+    })
+
+review24 = Review.create!({
+    rating: 3.7,
+    body: "Tangy but refreshing!!",
+    beer_id: beer6.id,
+    user_id: user2.id
+    })
+
+review25 = Review.create!({
+    rating: 4.5,
+    body: "Citrus. Dry. Fresh cut grass.",
+    beer_id: beer7.id,
+    user_id: user1.id
+    })
+
+review26 = Review.create!({
+    rating: 4.0,
+    body: "Still a great IPA and a great history behind it.",
+    beer_id: beer7.id,
+    user_id: user3.id
+    })
+
+review27 = Review.create!({
+    rating: 3.9,
+    body: "Very clean crisp flavor. Nice hoppy flavor but nothing super dank or fruity.",
+    beer_id: beer7.id,
+    user_id: user2.id
+    })
+
+review28 = Review.create!({
+    rating: 3.8,
+    body: "Great Balanced Bitterness.",
+    beer_id: beer7.id,
+    user_id: user5.id
+    })
+
+review29 = Review.create!({
+    rating: 4.4,
+    body: "Sour in the beginning, but finishes off smooth!",
+    beer_id: beer8.id,
+    user_id: user1.id
+    })
+
+review30 = Review.create!({
+    rating: 4.6,
+    body: "Nice crisp taste with a unique flavor. That’s how you do a sour.",
+    beer_id: beer8.id,
+    user_id: user4.id
+    })
+
+review31 = Review.create!({
+    rating: 4.7,
+    body: "Crazy how tastes change. Had this 2014 @ GABF. 2.5. Amazing now. Wasn't into sours then. World class.",
+    beer_id: beer8.id,
+    user_id: user3.id
+    })
+
+review32 = Review.create!({
+    rating: 3.9,
+    body: "Taste pretty good....got to be a sour guy to really appreciate it.",
+    beer_id: beer8.id,
+    user_id: user2.id
+    })
+
+review33 = Review.create!({
+    rating: 4.5,
+    body: "Found a 2014 bottle of this stuff. Still amazing after all these years.",
+    beer_id: beer9.id,
+    user_id: user1.id
+    })
+
+review34 = Review.create!({
+    rating: 4.2,
+    body: "Great stuff, good amount of citrusy sour funk from the Brett.",
+    beer_id: beer9.id,
+    user_id: user4.id
+    })
+
+review35 = Review.create!({
+    rating: 4.4,
+    body: "Super dry, tart and sour devilishly good!",
+    beer_id: beer9.id,
+    user_id: user3.id
+    })
+
+review36 = Review.create!({
+    rating: 5.0,
+    body: "Best beer from the west coast.",
+    beer_id: beer10.id,
+    user_id: user5.id
+    })
+
+review37 = Review.create!({
+    rating: 4.6,
+    body: "A little carmely. Grapefruit. Delicious.",
+    beer_id: beer10.id,
+    user_id: user1.id
+    })
+
+review38 = Review.create!({
+    rating: 3.1,
+    body: "First Pliny!",
+    beer_id: beer10.id,
+    user_id: user3.id
+    })
+
+review39 = Review.create!({
+    rating: 3.7,
+    body: "Plenty of floral, resinous pine.",
+    beer_id: beer10.id,
+    user_id: user4.id
+    })
+
+review40 = Review.create!({
+    rating: 4.5,
+    body: "The Elder. Respect your elders.",
+    beer_id: beer10.id,
+    user_id: user2.id
+    })
+
+review41 = Review.create!({
+    rating: 4.9,
+    body: "Great out of the bottle and on draft!",
+    beer_id: beer11.id,
+    user_id: user3.id
+    })
+
+review42 = Review.create!({
+    rating: 4.2,
+    body: "A: clear, golden, pale, light head // S: grape, green apple, grassy, honey // T: funky, farmhouse, oak, sour, citrus, floral, vinous // M: crisp, low carbonation, tannin",
+    beer_id: beer11.id,
+    user_id: user5.id
+    })
+
+Review43 = Review.create!({
+    rating: 4.0,
+    body: "Wonderful. Dry, but tart and subtle fruity back end.",
+    beer_id: beer11.id,
+    user_id: user2.id
+    })
+
+review44 = Review.create!({
+    rating: 4.4,
+    body: "Blessed be, holy Consecration! Pours a beautiful amber. Cabernet barrel present on the nose. Rich black currant, cherries, and oak highlight the profile. Always a treat.",
+    beer_id: beer12.id,
+    user_id: user4.id
+    })
+
+review45 = Review.create!({
+    rating: 4.0,
+    body: "Had in my fridge for quite a while now. From my buddy. Dry, tart, oak.",
+    beer_id: beer12.id,
+    user_id: user1.id
+    })
+
+review46 = Review.create!({
+    rating: 4.5,
+    body: "Very good, getting a lot of cabernet sauvignon, not much currants. Lovely tart wild ale",
+    beer_id: beer12.id,
+    user_id: user5.id
+    })
+
+review47 = Review.create!({
+    rating: 4.1,
+    body: "pretty good sour. fruity w barrel tones and a nice mouthfeel. I don’t like it when sours taste like liquid warheads",
+    beer_id: beer12.id,
+    user_id: user3.id
+    })
+
+review48 = Review.create!({
+    rating: 4.0,
+    body: "Rhubarb saison, a great way to use Rhubarb for sure",
+    beer_id: beer13.id,
+    user_id: user1.id
+    })
+
+review49 = Review.create!({
+    rating: 4.2,
+    body: "Not a lot of rhubarb but really good.",
+    beer_id: beer13.id,
+    user_id: user3.id
+    })
+
+review50 = Review.create!({
+    rating: 4.4,
+    body: "Wouldn't know a rhubarb if it hit me in the face but this beer rocks",
+    beer_id: beer13.id,
+    user_id: user4.id
+    })
+
+review51 = Review.create!({
+    rating: 4.5,
+    body: "Funky, bright, and a fantastic minerality. What a fantastic beer.",
+    beer_id: beer14.id,
+    user_id: user2.id
+    })
+
+review52 = Review.create!({
+    rating: 4.0,
+    body: "Brings the funk. Tart and tasty.",
+    beer_id: beer14.id,
+    user_id: user3.id
+    })
+
+review53 = Review.create!({
+    rating: 4.3,
+    body: "Held up really well over 2 years. Smooth and funky with hints of camomile.",
+    beer_id: beer14.id,
+    user_id: user1.id
+    })
+
+review54 = Review.create!({
+    rating: 4.6,
+    body: "Very tasty refreshing farmhouse.",
+    beer_id: beer14.id,
+    user_id: user5.id
+    })
+
+review55 = Review.create!({
+    rating: 3.8,
+    body: "Nice and light, lemony. Not sour, has a a little funk to it.",
+    beer_id: beer15.id,
+    user_id: user3.id
+    })
+
+review56 = Review.create!({
+    rating: 4.6,
+    body: "Wow, 4.6, lemongrass nice and subtle, compliments the oak and yeast so well.",
+    beer_id: beer15.id,
+    user_id: user5.id
+    })
+
+review57 = Review.create!({
+    rating: 4.7,
+    body: "One of the best beers I’ve had in NY. Packed full of flavor and completely crushable.",
+    beer_id: beer15.id,
+    user_id: user2.id
+    })
+
+review58 = Review.create!({
+    rating: 4.0,
+    body: "About as high as a pilsner gets.",
+    beer_id: beer16.id,
+    user_id: user4.id
+    })
+
+review59 = Review.create!({
+    rating: 4.1,
+    body: "Wanted this for the name, mostly, but this is a top notch Pilsner.",
+    beer_id: beer16.id,
+    user_id: user3.id
+    })
+
+review60 = Review.create!({
+    rating: 3.8,
+    body: "Bready and crispy.",
+    beer_id: beer16.id,
+    user_id: user1.id
+    })
+
+review61 = Review.create!({
+    rating: 5.0,
+    body: "Off the charts delicious tonight.",
+    beer_id: beer16.id,
+    user_id: user5.id
+    })
+
+review62 = Review.create!({
+    rating: 4.5,
+    body: "Broke the ceiling. It’s a 4.5 for sure.",
+    beer_id: beer17.id,
+    user_id: user2.id
+    })
+
+review63 = Review.create!({
+    rating: 4.3,
+    body: "While I don't normally have the thrills for the pils, I could drink this all day.",
+    beer_id: beer17.id,
+    user_id: user3.id
+    })
+
+review64 = Review.create!({
+    rating: 4.7,
+    body: "Wow I forgot how good this is. Stony and lively on the palate, elevates the florals, crackers, bitter.",
+    beer_id: beer17.id,
+    user_id: user4.id
+    })
+
+review65 = Review.create!({
+    rating: 4.2,
+    body: "Suarez just hits differently.",
+    beer_id: beer17.id,
+    user_id: user1.id
+    })
+
+review66 = Review.create!({
+    rating: 4.3,
+    body: "Excellent german style pilsner, cheers!",
+    beer_id: beer17.id,
+    user_id: user5.id
+    })
+
+review67 = Review.create!({
+    rating: 4.2,
+    body: "Just another incredibly clean beer from Suarez.",
+    beer_id: beer18.id,
+    user_id: user4.id
+    })
+
+review68 = Review.create!({
+    rating: 4.3,
+    body: "Balanced, bright, citrusy. I’ve said it before, Suarez can do no wrong.",
+    beer_id: beer18.id,
+    user_id: user3.id
+    })
+
+review69 = Review.create!({
+    rating: 4.7,
+    body: "2 months past the “best by” date and still amazing. Oranges, biscuits, and a subtle hint of the fruity yeast character in the background. Solidly bitter close that also brings in pine notes. Fluffy base. Such a flavor bomb at 4.5%",
+    beer_id: beer18.id,
+    user_id: user1.id
+    })
+
+review70 = Review.create!({
+    rating: 3.9,
+    body: "Couple days past best by, tastes like a hoppy lager, pretty tasty, smooth, crisp.",
+    beer_id: beer19.id,
+    user_id: user5.id
+    })
+
+review71 = Review.create!({
+    rating: 4.1,
+    body: "Lemon, floral, slight tropics. Could use some more beery bitterness in a pale but hard to say at 4.5 abv.",
+    beer_id: beer19.id,
+    user_id: user3.id
+    })
+
+review72 = Review.create!({
+    rating: 4.3,
+    body: "Wow. So refreshingly clean, medium-bodied, subtle hops and light. Just wonderful.",
+    beer_id: beer19.id,
+    user_id: user2.id
+    })
+
+review73 = Review.create!({
+    rating: 4.2,
+    body: "Light refreshing and flavorful. Slight bitterness on the backend and a hint of citrus. Quite enjoyable!",
+    beer_id: beer20.id,
+    user_id: user4.id
+    })
+
+review74 = Review.create!({
+    rating: 2.5,
+    body: "Bitter to me but tasty nonetheless",
+    beer_id: beer20.id,
+    user_id: user1.id
+    })
+
+review75 = Review.create!({
+    rating: 3.5,
+    body: "Easy drinking, light, and simple. Slightly syrupy edge to the flavor. Very pleasant table beer. Nothing groundbreaking!",
+    beer_id: beer20.id,
+    user_id: user3.id
+    })
+
+review76 = Review.create!({
+    rating: 4.1,
+    body: "Beautiful little Saison.",
+    beer_id: beer20.id,
+    user_id: user2.id
+    })
+
+review77 = Review.create!({
+    rating: 4.2,
+    body: "Lemon, orange & pear notes. Touch of barnyard funk. Dry & always good.",
+    beer_id: beer21.id,
+    user_id: user5.id
+    })
+
+review78 = Review.create!({
+    rating: 4.3,
+    body: "Smooth south with a berry hoppy and butter finish. Soft but a bit earthy and rustic in the finish.",
+    beer_id: beer21.id,
+    user_id: user3.id
+    })
+
+review79 = Review.create!({
+    rating: 3.8,
+    body: "A very tasty brew a little more on the sour side than I am accustomed to Saisons being but I like it.",
+    beer_id: beer21.id,
+    user_id: user1.id
+    })
+
+review80 = Review.create!({
+    rating: 4.0,
+    body: "Dry. Tart. Good!",
+    beer_id: beer21.id,
+    user_id: user4.id
+    })
+
+review81 = Review.create!({
+    rating: 4.5,
+    body: "Super good. Love a good sour barrel aged stout.",
+    beer_id: beer22.id,
+    user_id: user2.id
+    })
+
+review82 = Review.create!({
+    rating: 3.3,
+    body: "Got really grossed out by the smell of it but it tastes a lot better than I thought.",
+    beer_id: beer22.id,
+    user_id: user3.id
+    })
+
+review83 = Review.create!({
+    rating: 3.0,
+    body: "Not what I would call a stout very sour and drinks more like wine with the fruitiness.",
+    beer_id: beer22.id,
+    user_id: user4.id
+    })
+
+review84 = Review.create!({
+    rating: 4.4,
+    body: "Aroma of sweet raspberry jam, pleasantly surprised by the tartness and lack of sweetness.",
+    beer_id: beer23.id,
+    user_id: user5.id
+    })
+
+review85 = Review.create!({
+    rating: 4.5,
+    body: "Almost jammy, but super sweet.",
+    beer_id: beer23.id,
+    user_id: user2.id
+    })
+
+review86 = Review.create!({
+    rating: 4.8,
+    body: "Super sour and super delicious.",
+    beer_id: beer23.id,
+    user_id: user1.id
+    })
+
+review87 = Review.create!({
+    rating: 5.0,
+    body: "Possibly the best sour I’ve ever had",
+    beer_id: beer23.id,
+    user_id: user3.id
+    })
+
+review88 = Review.create!({
+    rating: 3.8,
+    body: "Interesting choice to sour a low abv English mild. I like it.",
+    beer_id: beer24.id,
+    user_id: user2.id
+    })
+
+review89 = Review.create!({
+    rating: 4.2,
+    body: "Tasty dark farmhouse. Dry and crisp carbonation. Jester has nice yeast.",
+    beer_id: beer24.id,
+    user_id: user3.id
+    })
+
+review90 = Review.create!({
+    rating: 3.9,
+    body: "Roasty farmhouse.",
+    beer_id: beer24.id,
+    user_id: user1.id
+    })
+
+review91 = Review.create!({
+    rating: 4.5,
+    body: "Still great. More tart than I recall. Funky cherry and some underlying pie spices.",
+    beer_id: beer25.id,
+    user_id: user5.id
+    })
+
+review92 = Review.create!({
+    rating: 4.6,
+    body: "This is really good. Very subtle. Dry wood tannins, cherry, sweet soft sour. Amazing. So well balanced.",
+    beer_id: beer25.id,
+    user_id: user1.id
+    })
+
+review93 = Review.create!({
+    rating: 4.4,
+    body: "Absolutely divine.",
+    beer_id: beer25.id,
+    user_id: user2.id
+    })
+
+review94 = Review.create!({
+    rating: 4.7,
+    body: "Aging sooooo wellll!!!!! This beer is a crusher with tons of Cherry and little to no acidity. Tasting like liquid cherry pie",
+    beer_id: beer25.id,
+    user_id: user3.id
+    })
+
+review95 = Review.create!({
+    rating: 4.5,
+    body: "Blend#8, March 2018. Funky barrel aroma. Fruity notes (red berries). Sour. Woody undertones. Dry.",
+    beer_id: beer26.id,
+    user_id: user1.id
+    })
+
+review96 = Review.create!({
+    rating: 3.7,
+    body: "Dark fruit dry tart fruity.",
+    beer_id: beer26.id,
+    user_id: user4.id
+    })
+
+review97 = Review.create!({
+    rating: 4.0,
+    body: "Looking for a bit more funk and less acidity. Not bad though.",
+    beer_id: beer26.id,
+    user_id: user2.id
+    })
+
+review98 = Review.create!({
+    rating: 4.95,
+    body: "This is incredible. It takes a refined palate to appreciate this true beauty.",
+    beer_id: beer27.id,
+    user_id: user3.id
+    })
+
+review99 = Review.create!({
+    rating: 3.0,
+    body: "Interesting. Three times fermentation with wine.",
+    beer_id: beer27.id,
+    user_id: user1.id
+    })
+
+review100 = Review.create!({
+    rating: 4.1,
+    body: "Really nice co ferment. Has some good sweetness.",
+    beer_id: beer27.id,
+    user_id: user5.id
+    })
+
+review101 = Review.create!({
+    rating: 4.5,
+    body: "Wine like, dry & fruity. Well balanced and easy drinking.",
+    beer_id: beer27.id,
+    user_id: user4.id
+    })
+
+review102 = Review.create!({
+    rating: 4.2,
+    body: "Delicious as always. Love the smaller format bottle.",
+    beer_id: beer28.id,
+    user_id: user2.id
+    })
+
+review103 = Review.create!({
+    rating: 4.0,
+    body: "Belgiany spices & fruit flavors. Full-bodied, yet light. Instead of Acadia for spring break this year, it’s just a deck chair and Maine beer.",
+    beer_id: beer28.id,
+    user_id: user3.id
+    })
+
+review104 = Review.create!({
+    rating: 4.4,
+    body: "Smooth upfront, distinctly Bourbon taste on the back. Pours a great golden.",
+    beer_id: beer28.id,
+    user_id: user1.id
+    })
+
+review105 = Review.create!({
+    rating: 4.5,
+    body: "Big on the Belgian. Big on the booze.",
+    beer_id: beer28.id,
+    user_id: user2.id
+    })
+
+review106 = Review.create!({
+    rating: 4.6,
+    body: "This continues to be a favorite. Lovely Tripel with subtle spices and barrel-aged flavoring. My beloved is quite fond of it too.",
+    beer_id: beer28.id,
+    user_id: user5.id
+    })
+
+review107 = Review.create!({
+    rating: 4.1,
+    body: "Just has a warm and buttery bourbon thing going on, good sipper.",
+    beer_id: beer28.id,
+    user_id: user4.id
+    })
+
+review108 = Review.create!({
+    rating: 4.0,
+    body: "Could be my everyday beer.",
+    beer_id: beer29.id,
+    user_id: user1.id
+    })
+
+review109 = Review.create!({
+    rating: 5.0,
+    body: "I am really warming up to wheat beer. #palateisgrowing!",
+    beer_id: beer29.id,
+    user_id: user2.id
+    })
+
+review110 = Review.create!({
+    rating: 3.8,
+    body: "Solid standby.",
+    beer_id: beer29.id,
+    user_id: user3.id
+    })
+
+review111 = Review.create!({
+    rating: 4.0,
+    body: "Great beer. Deserves the 4.",
+    beer_id: beer29.id,
+    user_id: user4.id
+    })
+
+review112 = Review.create!({
+    rating: 5.0,
+    body: "This is my go-to favorite beer. It’s clean, refreshing and super tasty. It’s not hard to have multiple of these and keep coming back for more.",
+    beer_id: beer29.id,
+    user_id: user5.id
+    })
+
+review113 = Review.create!({
+    rating: 4.1,
+    body: "Nose: earthy musty barn boards raspberry funk Taste: herbal medicinal raspberry slight vinegar upfront & tart very dry rasp lemon on backend.",
+    beer_id: beer30.id,
+    user_id: user4.id
+    })
+
+review114 = Review.create!({
+    rating: 4.5,
+    body: "Wow! My tastebuds are standing at attention. Puckering sour from the get-go with raspberry blasting through. Great barrel-aged taste.",
+    beer_id: beer30.id,
+    user_id: user3.id
+    })
+
+review115 = Review.create!({
+    rating: 3.0,
+    body: "Bottled 5 yrs ago next month. Not as good as I remember, might be the age and/or lack of carbonation.",
+    beer_id: beer30.id,
+    user_id: user2.id
+    })
+
+review116 = Review.create!({
+    rating: 3.7,
+    body: "2015 bottle, smells more sour than it tastes. A lot of raspberries.",
+    beer_id: beer30.id,
+    user_id: user1.id
+    })
+
+review117 = Review.create!({
+    rating: 4.5,
+    body: "Acidic, tart and a nice raspberry sweetness on the end. Really really good stuff.",
+    beer_id: beer31.id,
+    user_id: user3.id
+    })
+
+review118 = Review.create!({
+    rating: 4.4,
+    body: "Allagash is one of a handful of American breweries who makes consistent wild ales with restrained acidity.",
+    beer_id: beer31.id,
+    user_id: user5.id
+    })
+
+review119 = Review.create!({
+    rating: 4.0,
+    body: "Always been a fan of Allagash's white but this lambic is very fruity with a dry finish. Raspberries are center stage with citrus notes.",
+    beer_id: beer31.id,
+    user_id: user2.id
+    })
+
+review120 = Review.create!({
+    rating: 4.0,
+    body: "Perfect. Not too sour or sweet.",
+    beer_id: beer32.id,
+    user_id: user3.id
+    })
+
+review121 = Review.create!({
+    rating: 3.9,
+    body: "Very tart but not overwhelming. Clean finish.",
+    beer_id: beer32.id,
+    user_id: user2.id
+    })
+
+review122 = Review.create!({
+    rating: 3.8,
+    body: "Bit of a bottle bomb. This half of glass is good though.",
+    beer_id: beer32.id,
+    user_id: user4.id
+    })
+
+review123 = Review.create!({
+    rating: 4.1,
+    body: "Peach juice! Of the finest!",
+    beer_id: beer32.id,
+    user_id: user1.id
+    })
+
+review124 = Review.create!({
+    rating: 3.5,
+    body: "Can’t go wrong with a classic.",
+    beer_id: beer33.id,
+    user_id: user1.id
+    })
+
+review125 = Review.create!({
+    rating: 3.3,
+    body: "A standard IPA, still a good one.",
+    beer_id: beer33.id,
+    user_id: user2.id
+    })
+
+review126 = Review.create!({
+    rating: 3.0,
+    body: "Fine beer. Nothing too special.",
+    beer_id: beer33.id,
+    user_id: user3.id
+    })
+
+review127 = Review.create!({
+    rating: 4.5,
+    body: "Simply one of my favorite pale ales. Bring on Spring grilling.",
+    beer_id: beer33.id,
+    user_id: user4.id
+    })
+
+review128 = Review.create!({
+    rating: 4.0,
+    body: "Great carmel malty sweet nose, nice medium body, Piney hop bite To the finish, quite tasty",
+    beer_id: beer34.id,
+    user_id: user5.id
+    })
+
+review129 = Review.create!({
+    rating: 3.5,
+    body: "Very Nice beer with a lot of hoppy and fruity flavours.",
+    beer_id: beer34.id,
+    user_id: user2.id
+    })
+
+review130 = Review.create!({
+    rating: 4.5,
+    body: "Not a big IPA drinker, but this was just as advertised: Fresh. Very good flavor. Drank the whole thing gladly. I’d drink this again. Great clean crisp flavor.",
+    beer_id: beer34.id,
+    user_id: user3.id
+    })
+
+review131 = Review.create!({
+    rating: 4.0,
+    body: "Sweet lightly toasty malts with tea undertones and cooked-peach hop character. Tannic bitterness. Leans toward English style, very good",
+    beer_id: beer34.id,
+    user_id: user1.id
+    })
+
+review132 = Review.create!({
+    rating: 3.8,
+    body: "Smooth with strong vanilla notes.",
+    beer_id: beer35.id,
+    user_id: user4.id
+    })
+
+review133 = Review.create!({
+    rating: 2.5,
+    body: "It’s an average Stout. Nothing truly special about it.",
+    beer_id: beer35.id,
+    user_id: user3.id
+    })
+
+review134 = Review.create!({
+    rating: 4.4,
+    body: "Can't tell if the after taste is just that good or if it mixed well with my toothpaste.",
+    beer_id: beer35.id,
+    user_id: user5.id
+    })
+
+review135 = Review.create!({
+    rating: 4.0,
+    body: "A very tasty imperial stout.",
+    beer_id: beer35.id,
+    user_id: user1.id
+    })
+
+review136 = Review.create!({
+    rating: 3.5,
+    body: "Tastes like a torpedo base with rye thrown in. Solid.",
+    beer_id: beer36.id,
+    user_id: user2.id
+    })
+
+review137 = Review.create!({
+    rating: 3.7,
+    body: "This is a nice and peppery IPA that is not lacking in spice notes.",
+    beer_id: beer36.id,
+    user_id: user3.id
+    })
+
+review138= Review.create!({
+    rating: 3.3,
+    body: "Rye beers are funky.",
+    beer_id: beer36.id,
+    user_id: user4.id
+    })
+
+review139 = Review.create!({
+    rating: 4.0,
+    body: "Delicious sharp-edged IPA with plenty of citrus/pine hops alongside spicy rye notes.",
+    beer_id: beer36.id,
+    user_id: user5.id
+    })
+
+review140 = Review.create!({
+    rating: 2.0,
+    body: "Nope. Not my style.",
+    beer_id: beer36.id,
+    user_id: user1.id
+    })
+
+review141 = Review.create!({
+    rating: 4.2,
+    body: "Very clean solid saison.",
+    beer_id: beer37.id,
+    user_id: user1.id
+    })
+
+review142 = Review.create!({
+    rating: 5.0,
+    body: "I think I put this bottle in the cellar in 2016. It has aged well. Sweet start, dry finish, nice 'brettyness'.",
+    beer_id: beer37.id,
+    user_id: user3.id
+    })
+
+review143 = Review.create!({
+    rating: 4.6,
+    body: "This is everything I want in a saison!",
+    beer_id: beer37.id,
+    user_id: user5.id
+    })
+
+review144 = Review.create!({
+    rating: 4.7,
+    body: "Crazy how different this tastes every time I have it. Not lemony as the last time I had it. This is the latest release.",
+    beer_id: beer37.id,
+    user_id: user4.id
+    })
+
+review145 = Review.create!({
+    rating: 4.0,
+    body: "Dry and refreshing. Perfect for a sunny day.",
+    beer_id: beer37.id,
+    user_id: user2.id
+    })
+
+review146 = Review.create!({
+    rating: 5.0,
+    body: "Really good apricot saison!",
+    beer_id: beer38.id,
+    user_id: user3.id
+    })
+
+review147 = Review.create!({
+    rating: 4.6,
+    body: "4.6 right combo of tart and sweet. Really good.",
+    beer_id: beer38.id,
+    user_id: user5.id
+    })
+
+review148 = Review.create!({
+    rating: 4.3,
+    body: "Refreshing and oaky depth. Not getting much apricot though.",
+    beer_id: beer38.id,
+    user_id: user2.id
+    })
+
+review149 = Review.create!({
+    rating: 4.5,
+    body: "Tart, fruity and funky peach. Oak mellows this perfectly. Tough to beat for a peach wild ale.",
+    beer_id: beer38.id,
+    user_id: user1.id
+    })
+
+review150 = Review.create!({
+    rating: 4.4,
+    body: "Supporting local businesses seldom tastes this good. SARA has definitely refined their haze game since the last time I had this one.",
+    beer_id: beer39.id,
+    user_id: user2.id
+    })
+
+review151 = Review.create!({
+    rating: 4.0,
+    body: "Tastes more yeast-y than I remember. First time trying from a can.",
+    beer_id: beer39.id,
+    user_id: user1.id
+    })
+
+review152 = Review.create!({
+    rating: 4.1,
+    body: "Good batch, but not the best I’ve had. Still one of my favorite IPA’s by SARA or anyone else. Lots of apricot and guava. Creamy and bitter.",
+    beer_id: beer39.id,
+    user_id: user4.id
+    })
+
+review153 = Review.create!({
+    rating: 4.5,
+    body: "Wow, the nose on this smells so jammy, crazy. Don't remember it like this. Probably the best I've had from them, IPA wise. Nice and smooth.",
+    beer_id: beer39.id,
+    user_id: user5.id
+    })
+
+review154 = Review.create!({
+    rating: 4.9,
+    body: "One of the fruitier bottles, tart peach in the body and skins on the nose.",
+    beer_id: beer40.id,
+    user_id: user1.id
+    })
+
+review155 = Review.create!({
+    rating: 4.8,
+    body: "Fruit has faded but starting to develop some old sante funk and love.",
+    beer_id: beer40.id,
+    user_id: user2.id
+    })
+
+review156 = Review.create!({
+    rating: 4.7,
+    body: "Classic sante drinkable beer with the nice peach flavor.",
+    beer_id: beer40.id,
+    user_id: user4.id
+    })
+
+review157 = Review.create!({
+    rating: 4.4,
+    body: "4.4. Really enjoyed this one. Peaches are subtle and the typical sara funk is present",
+    beer_id: beer40.id,
+    user_id: user3.id
+    })
+
+review158 = Review.create!({
+    rating: 4.45,
+    body: "4.45. Backlog. Nice ripe peach w a little bit of funk. Aging pretty nicely but the peach is fading a bit.",
+    beer_id: beer40.id,
+    user_id: user5.id
+    })
+
+review159 = Review.create!({
+    rating: 3.8,
+    body: "Refreshing and crisp. Super easy drinking. I enjoyed the slight fruity finish. Definitely one to sit back and relax with.",
+    beer_id: beer41.id,
+    user_id: user2.id
+    })
+
+
+review160 = Review.create!({
+    rating: 3.5,
+    body: "It was good so I had another.",
+    beer_id: beer41.id,
+    user_id: user3.id
+    })
+
+
+review161 = Review.create!({
+    rating: 3.3,
+    body: "Sweetness paired with a slight bitterness, refreshing drinking experience.",
+    beer_id: beer41.id,
+    user_id: user1.id
+    })
+
+
+review161 = Review.create!({
+    rating: 4.0,
+    body: "Clean, and a little skunky in a good way.",
+    beer_id: beer41.id,
+    user_id: user5.id
+    })
+
+
+review162 = Review.create!({
+    rating: 3.7,
+    body: "A classic that never lets you down.",
+    beer_id: beer41.id,
+    user_id: user4.id
+    })
+
+review163 = Review.create!({
+    rating: 4.9,
+    body: "One of my absolute favorite beers. Hard to name anything I would improve. Firm cracker & bread backbone, full spice & fruit Belgian yeast, just a touch of flowery hops. So very drinkable. World class.",
+    beer_id: beer42.id,
+    user_id: user2.id
+    })
+
+review164 = Review.create!({
+    rating: 4.3,
+    body: "A classic. Always a good & tasty one.",
+    beer_id: beer42.id,
+    user_id: user3.id
+    })
+
+review165 = Review.create!({
+    rating: 3.0,
+    body: "Quality beer. Solid Belgian. Very well built. Great texture.",
+    beer_id: beer42.id,
+    user_id: user1.id
+    })
+
+review166 = Review.create!({
+    rating: 3.0,
+    body: "Disappointingly 'soft' and matching body compared to what memories I had of this beer.",
+    beer_id: beer43.id,
+    user_id: user5.id
+    })
+
+review167 = Review.create!({
+    rating: 4.5,
+    body: "Probably my favorite of the more mainstream Belgian beers. Very smooth.",
+    beer_id: beer43.id,
+    user_id: user4.id
+    })
+
+review168 = Review.create!({
+    rating: 4.25,
+    body: "Doesn't cling to my gums like it used to, which is fine. It seems to have mellowed out.",
+    beer_id: beer43.id,
+    user_id: user2.id
+    })
+
+review169 = Review.create!({
+    rating: 3.3,
+    body: "Like Finnish sima (mead) with bubbles. Surprisingly I don't taste the alcohol much but can't really say that the taste is complex.",
+    beer_id: beer44.id,
+    user_id: user1.id
+    })
+
+review170 = Review.create!({
+    rating: 4.3,
+    body: "More like a high-end cider crossed with champagne rather than a beer! Incredibly dry, fruity (apple) and quite floral.",
+    beer_id: beer44.id,
+    user_id: user5.id
+    })
+
+review171 = Review.create!({
+    rating: 2.5,
+    body: "Tastes like nail polish remover, funk, herby.",
+    beer_id: beer44.id,
+    user_id: user3.id
+    })
+
+review172 = Review.create!({
+    rating: 4.5,
+    body: "Is it wine? Is it beer? Who knows? It’s tasty though!",
+    beer_id: beer44.id,
+    user_id: user2.id
+    })
+
+review173 = Review.create!({
+    rating: 4.3,
+    body: "My mate reckons it tastes like a really good snakebite, I think it's like a really really fizzy Belgian beer.",
+    beer_id: beer44.id,
+    user_id: user4.id
+    })
+
+
+
+
+
+
+
+
     

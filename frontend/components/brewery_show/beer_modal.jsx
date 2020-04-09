@@ -23,24 +23,25 @@ class BeerModal extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    // const breweryId = this.state.breweryName.id
 
-    // const newBrewery = {
-    //     name: this.state.breweryName,
-    //     address: this.state.breweryAddress,
-    //     city: this.state.breweryCity,
-    //     state: this.state.breweryState,
-    //     country: this.state.breweryCountry,
-    //     description: this.state.breweryDescription,
-    //     rating: 5.0
-    // }
+    const newBeer = {
+      name: this.state.beerName,
+      brewery_id: breweryId,
+      style: this.state.beerStyle,
+      rating: 5,
+      description: this.state.beerDescription,
+      abv: this.state.beerABV,
+      ibu: this.state.beerIBU
+    }
 
-    // this.props.createBrewery(newBrewery).then(res => {
-    //     if (res.type === "RECEIVE_BREWERY_ERRORS") {
-    //         return null;
-    //     } else if (res.type === "RECEIVE_BREWERY") {
-    //         return this.props.history.push(`/brewery/${res.brewery.id}`)
-    //     }
-    // })
+    this.props.createBeer(newBeer).then(res => {
+        if (res.type === "RECEIVE_BEER_ERRORS") {
+            return null;
+        } else if (res.type === "RECEIVE_BEER") {
+            return this.props.history.push(`/beer/${res.beer.id}`)
+        }
+    })
   }
 
   handleChange(type) {

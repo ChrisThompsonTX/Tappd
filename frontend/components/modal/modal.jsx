@@ -21,8 +21,8 @@ function Modal({ modal, closeModal }) {
     }
     return (
         <div className="session-form">
-            <div className="modal-background" onClick={closeModal}>
-                <div className="modal-child" onClick={e => e.stopPropagation()}>
+            <div className="splash-modal-background" onClick={closeModal}>
+                <div className="splash-modal-child" onClick={e => e.stopPropagation()}>
                     {component}
                 </div>
             </div>
