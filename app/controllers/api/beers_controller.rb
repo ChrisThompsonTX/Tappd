@@ -7,7 +7,11 @@ class Api::BeersController < ApplicationController
 
   def show
     @beer = Beer.find(params[:id])
-    render :show
+    if @beer 
+      render :show
+    else
+      render json: @beer.errors.full_messages, status: 422
+    end
   end
   
   def create

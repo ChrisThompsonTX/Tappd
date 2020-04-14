@@ -18,7 +18,7 @@ class BreweryShowItem extends React.Component {
                     <h4>{this.props.beer.abv} % ABV</h4>
                     <h4>{this.props.beer.ibu} IBU</h4>
                     <h4><div className="rating-container" ><Rating rating={this.props.beer.rating} /></div></h4>
-                    <h4>{this.props.beer.reviewIds.length} Reviews</h4>
+                    {/* <h4>{this.props.beer.reviewIds.length} Reviews</h4> */}
                 </div>
             </div>
         )

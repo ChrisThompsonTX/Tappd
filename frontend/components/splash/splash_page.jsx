@@ -81,7 +81,7 @@ class SplashPage extends React.Component{
 
                 <section className="app-callout">
                     <h3>Start discovering and sharing now.</h3>
-                    <button id="get-app-button">GET THE APP ›</button>
+                    <button id="get-app-button" className="future-content">GET THE APP ›</button>
                 </section>
 
                 <section className="utfb">
@@ -97,28 +97,28 @@ class SplashPage extends React.Component{
                             <li>Maximize visibility to drive new customers to your venue</li>
                             <li>Keep your customers up-to-date by publishing to Untappd, Twitter, &amp; Facebook</li>
                         </ul>
-                        <button>REQUEST A DEMO</button>
+                        <button className="future-content" >REQUEST A DEMO</button>
                     </div>
                 </section>
 
                 <section className="brewery-callout">
                     <h3>Work for a brewery? View insights and engage with customers.</h3>
-                    <button id="claim-brewery">CLAIM YOUR BREWERY TODAY ›</button>
+                    <button id="claim-brewery" className="future-content" >CLAIM YOUR BREWERY TODAY ›</button>
                 </section>
 
                 <footer>
                     <div id="footer-nav">
                         <div className="nav-items">
-                            <button>Home</button>
-                            <button>The Pub</button>
-                            <button>Store</button>
-                            <button>Breweries</button>
-                            <button>Blog</button>
-                            <button>Support</button>
-                            <button>Careers</button>
-                            <button>API</button>
-                            <button>Terms</button>
-                            <button>Privacy</button>
+                            <button className="future-content" >Home</button>
+                            <button className="future-content" >The Pub</button>
+                            <button className="future-content" >Store</button>
+                            <button className="future-content" >Breweries</button>
+                            <button className="future-content" >Blog</button>
+                            <button className="future-content" >Support</button>
+                            <button className="future-content" >Careers</button>
+                            <button className="future-content" >API</button>
+                            <button className="future-content" >Terms</button>
+                            <button className="future-content" >Privacy</button>
                         </div>
                         <p>© Untappd, Inc. 2020</p>
                     </div>

@@ -8,8 +8,6 @@ class BeerShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchBeer(this.props.match.params.beerId)
-    this.props.fetchBreweries()
-    this.props.fetchUsers()
   }
 
   render() {
@@ -25,7 +23,8 @@ class BeerShow extends React.Component {
                 <div className="beer-container-top">
                   <img className="beer-show-label" src={this.props.beer.label} />
                   <div className="beer-show-info">
-                    <Link className="beer-name" to={`/beer/${this.props.beer.id}`}>{this.props.beer.name}</Link>
+                    <h1 className="beer-name">{this.props.beer.name}</h1>
+                    <h2 className="brewery-name" >{this.props.beer.brewery_id}</h2>
                     <h3>{this.props.beer.style}</h3>
                     <h4>{this.props.beer.description}</h4>
                   </div>
@@ -34,13 +33,13 @@ class BeerShow extends React.Component {
                   <h4>{this.props.beer.abv} % ABV</h4>
                   <h4>{this.props.beer.ibu} IBU</h4>
                   <h4><div className="rating-container" ><Rating rating={this.props.beer.rating} /></div></h4>
-                  {/* <h4>{this.props.beer.reviewIds.length} Reviews</h4> */}
+                  <h4>{this.props.beer.reviews.length} Reviews</h4>
                 </div>
               </div>
             </header>
             <section className="beer-show-review-container">
-              {this.props.beer.reviews.map((review)=> {
-                <Review review={review} users={this.props.users} breweries={this.props.breweries} />
+              {this.props.beer.reviews.map((review,idx)=> {
+                return <Review review={review} key={idx} />
               })}
             </section>
           </div>

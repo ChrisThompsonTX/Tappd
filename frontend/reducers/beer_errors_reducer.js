@@ -9,6 +9,7 @@ const beerErrorsReducer = (state = [], action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_BEER_ERRORS:
+            debugger
             return action.errors;
         case RECEIVE_ALL_BEERS:
             return [];

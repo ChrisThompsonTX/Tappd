@@ -14,7 +14,7 @@ class Beer < ApplicationRecord
     class_name: :Brewery
 
   has_many :reviews,
-    foreign_key: :user_id,
+    foreign_key: :beer_id,
     class_name: :Review
 
   has_many :reviewers,

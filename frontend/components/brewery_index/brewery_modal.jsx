@@ -31,7 +31,8 @@ class BreweryModal extends React.Component {
       state: this.state.breweryState,
       country: this.state.breweryCountry,
       description: this.state.breweryDescription,
-      rating: 5.0
+      rating: 5.0,
+      // logo: 
     }
 
     this.props.createBrewery(newBrewery).then(res => {

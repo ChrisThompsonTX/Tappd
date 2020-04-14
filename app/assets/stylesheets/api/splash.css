@@ -131,6 +131,10 @@
     border-radius: 4px;
 }
 
+.future-content {
+    cursor: not-allowed !important;
+}
+
 @keyframes fade-in {
     from {opacity: 0;}
     to {opacity: 1;}

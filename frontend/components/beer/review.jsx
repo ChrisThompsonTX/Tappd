@@ -3,13 +3,12 @@ import React from 'react';
 class Review extends React.Component {
 
   render() {
-    const review = this.props.reviews
-
 
     return (
       <div className="review-container">
         <div>
-          {this.props.reviewId}
+          {this.props.review.body}
+          {this.props.review.user.profile_photo}
         </div>
       </div>
     )
