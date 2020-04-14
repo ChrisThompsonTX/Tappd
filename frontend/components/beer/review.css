@@ -1,0 +1,54 @@
+.profile-photo, .review-logo {
+    height: 100%;
+}
+
+.profile-photo-container, .review-logo-container {
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fc0;
+}
+
+.review-logo-container {
+    border: none;
+    border-radius: 0;
+}
+
+.review-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.review-info {
+    width: 72%;
+}
+
+.review-body {
+    border: 1px solid #eee;
+    padding: 1vh .5vh;
+}
+
+
+
+.created-at {
+    color: #999;
+    font-size: .8em;
+    padding: .5vh 0;
+}
+
+.review-title {
+    padding: .5vh 0;
+}
+
+.review-border {
+    width: 100%;
+    border: 1px solid #eee;
+}
