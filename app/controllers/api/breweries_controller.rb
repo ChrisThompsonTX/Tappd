@@ -49,7 +49,8 @@ class Api::BreweriesController < ApplicationController
             :description,
             :rating,
             :lat,
-            :lng
+            :lng,
+            :logo
         )
     end
 end

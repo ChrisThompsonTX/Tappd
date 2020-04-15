@@ -14,12 +14,14 @@ class BreweryModal extends React.Component {
       breweryCity: "",
       breweryState: "",
       breweryCountry: "",
-      breweryDescription: ""
+      breweryDescription: "",
+      logo: "https://tappd-seeds.s3-us-west-1.amazonaws.com/BreweryLogos/Brewhouse-525.jpg"
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
+
 
   handleSubmit(e) {
     e.preventDefault();
@@ -32,7 +34,7 @@ class BreweryModal extends React.Component {
       country: this.state.breweryCountry,
       description: this.state.breweryDescription,
       rating: 5.0,
-      // logo: 
+      logo: this.state.logo
     }
 
     this.props.createBrewery(newBrewery).then(res => {
@@ -59,6 +61,8 @@ class BreweryModal extends React.Component {
         that.setState({ breweryCountry: e.target.value });
       } else if (type === "breweryDescription") {
         that.setState({ breweryDescription: e.target.value });
+      } else if (type === "image") {
+        that.setState({logo: e.target.value})
       }
     };
   }
@@ -69,7 +73,7 @@ class BreweryModal extends React.Component {
         <div className="modal-child" onClick={e => e.stopPropagation()}>
           <div className="form-header">
             <h2>Add a New Brewery</h2>
-            <FontAwesomeIcon className="exit-modal" onClick={this.props.handleModal} icon={faTimes} color="white" size="1.5x"/>
+            <FontAwesomeIcon className="exit-modal" onClick={this.props.handleModal} icon={faTimes} color="white" size="1x"/>
           </div>
           <form className="create-form" onSubmit={this.handleSubmit}>
             <div className="name-input">
@@ -114,10 +118,12 @@ class BreweryModal extends React.Component {
                       <img className="add-photo-icon" src="https://untappd.akamaized.net/assets/v3/images/ico_checkin_photo.png"/>
                     </label>
                       <input
+                        required
                         id="file-upload"
                         className="image-upload"
                         type="file"
                         accept="image/*"
+                        onChange={this.handleChange("image")}
                         >
                       </input>
                   </div>

@@ -26,6 +26,19 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.quote-square {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    transform: rotate(45deg);
+    /* rotate: 45deg; */
+    border-left: solid #eee 1px;
+    border-top: solid #eee 1px;
+    background-color: #fff;
+    left: 20px;
+    top: 8px;
+}
+
 
 .review-info {
     width: 72%;
@@ -36,7 +49,9 @@
     padding: 1vh .5vh;
 }
 
-
+.rating {
+    justify-content: end !important;
+}
 
 .created-at {
     color: #999;

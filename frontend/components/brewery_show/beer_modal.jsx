@@ -142,6 +142,7 @@ class BeerModal extends React.Component {
                       className="image-upload"
                       type="file"
                       accept="image/*"
+                      onChange={this.handleChange("image")}
                     >
                     </input>
                   </div>

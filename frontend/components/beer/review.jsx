@@ -32,6 +32,7 @@ class Review extends React.Component {
               <div className="review-title">
                   {this.props.review.user.username} is drinking a {this.props.beer.name} by {this.props.beer.breweryId}
               </div>
+              <div className="quote-square"></div>
               <div className="review-body">
                 <h2>
                   {this.props.review.body}
