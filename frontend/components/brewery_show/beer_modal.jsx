@@ -14,7 +14,8 @@ class BeerModal extends React.Component {
             beerStyle: "",
             beerDescription: "",
             beerABV: "",
-            beerIBU: ""
+            beerIBU: "",
+            label: ""
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,7 +24,7 @@ class BeerModal extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // const breweryId = this.state.breweryName.id
+    const breweryId = this.state.breweryName.id
 
     const newBeer = {
       name: this.state.beerName,
@@ -59,11 +60,14 @@ class BeerModal extends React.Component {
           that.setState({ beerABV: e.target.value });
       } else if (type === "beerIBU") {
           that.setState({ beerIBU: e.target.value });
+      } else if (type === "image") {
+          that.setState({ label: e.target.value });
       }
     };
   }
 
   render() {
+    console.log(Object.keys(this.props.breweries))
     return (
       <div className="modal-background" onClick={this.props.handleModal}>
         <div className="modal-child" onClick={e => e.stopPropagation()}>
@@ -95,19 +99,16 @@ class BeerModal extends React.Component {
                   <label>
                     <span>Brewery:</span>
                     <div>
-                      <input
+                      <select 
+                        id="breweries"
                         required
-                        onChange={this.handleChange("breweryName")}
-                        className="input-field"
-                        type="text"
-                        value={this.state.breweryId}
-                        placeholder="Brewery"
-                      />
-                      {/* <select id="breweries">
-                        {this.props.breweries.map( brewery => {
-                          <option key={brewery.id} value={`${brewery.name}`}>{brewery.name}</option>
-                        })}
-                      </select> */}
+                        onChange={this.handleChange("breweryName")
+                        }
+                        >
+                        {Object.keys(this.props.breweries).map( brewId => (
+                           <option key={this.props.breweries[brewId].id} value={`${brewId}`}>{this.props.breweries[brewId].name}</option>
+                        ))}
+                      </select>
                     </div>
                   </label>
                 </div>
@@ -134,7 +135,7 @@ class BeerModal extends React.Component {
               <div className="beer-image-input">
                 <div className="beer-image-container">
                   <div>
-                    <label for="file-upload" className="add-photo-button">
+                    <label htmlFor="file-upload" className="add-photo-button">
                       <img className="add-photo-icon" src="https://untappd.akamaized.net/assets/v3/images/ico_checkin_photo.png" />
                     </label>
                     <input

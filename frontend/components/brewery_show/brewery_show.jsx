@@ -18,7 +18,6 @@ class BreweryShow extends React.Component {
   componentDidMount() {
     this.props.fetchBrewery(this.props.match.params.breweryId)
     // this.props.fetchBreweries()
-    // console.log(this.props)
   }
 
   handleModal(e) {
@@ -80,6 +79,7 @@ class BreweryShow extends React.Component {
             <BeerModal 
               handleModal={this.handleModal} 
               createBeer={this.props.createBeer}
+              breweries={this.props.breweries.otherBreweries}
               /> : null}
         </div>
       )
