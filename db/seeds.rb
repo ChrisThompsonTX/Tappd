@@ -796,6 +796,10 @@ review1 = Review.create!({
     user_id: user1.id
     })
 
+photo1 = open('https://untappd.akamaized.net/photos/2020_04_11/340c1a31aba5cf6fee4571ed25b53a48_1280x1280.jpg')
+review1.photo.attach(io: photo1, filename: 'Bosteels-Deus.png')
+
+
 review2 = Review.create!({
     rating: 4.0,
     body: "this is the beer I want when I want it done clean and clear. wish we had this on the east coast",

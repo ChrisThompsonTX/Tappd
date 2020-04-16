@@ -44,7 +44,8 @@ class Api::ReviewsController < ApplicationController
             :rating,
             :body,
             :beer_id,
-            :user_id
+            :user_id,
+            :photo
         )
     end
 end

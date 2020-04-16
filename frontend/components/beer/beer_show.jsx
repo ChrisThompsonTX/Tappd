@@ -10,7 +10,6 @@ class BeerShow extends React.Component {
     super(props)
 
     this.state = {
-      description: this.props.beer.description,
       more: false
     }
 

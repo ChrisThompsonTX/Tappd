@@ -9,10 +9,12 @@ class BreweryShow extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      openModal: false
+      openModal: false,
+      more: false
     }
 
     this.handleModal = this.handleModal.bind(this);
+    this.handleMore = this.handleMore.bind(this);
   }
 
   componentDidMount() {
@@ -32,6 +34,15 @@ class BreweryShow extends React.Component {
       })
     }
   };
+
+  handleMore(e) {
+    e.preventDefault();
+    if (this.state.more) {
+      this.setState({ more: false })
+    } else {
+      this.setState({ more: true })
+    }
+  }
 
   render() {
     if (!this.props.brewery || !this.props.brewery.beers)  {
@@ -58,9 +69,27 @@ class BreweryShow extends React.Component {
                     </div>
                   </div>
                 </div>
-                <div className="brewery-description">
+                {/* <div className="brewery-description">
                   <h4>{this.props.brewery.description}</h4>
-                </div>
+                </div> */}
+                <h4 className="beer-description">{this.props.brewery.description.length > 150 && !this.state.more ?
+                  this.props.brewery.description.slice(0, 150) + "..."
+                  :
+                  this.props.brewery.description
+                }
+                  {this.props.brewery.description.length > 150 ?
+                    <a className="more-button" onClick={this.handleMore}>
+                      {this.state.more ?
+                        <span>Show less</span>
+                        :
+                        <span>Show more</span>
+                      }
+                    </a>
+                    :
+                    null
+                  }
+                </h4>
+                <div className="review-border"></div>
               </div>
             </header>
             <div className="beers-list">

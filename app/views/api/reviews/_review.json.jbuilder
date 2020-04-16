@@ -4,6 +4,7 @@ json.extract! review,
     :beer_id,
     :user_id
     :beer
+    json.photo url_for(review.photo)
 # json.partial! "api/beers/beer", beer: review.beer
 
 json.beer(review.beer) do |beer|

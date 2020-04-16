@@ -8,11 +8,16 @@ class ThePub extends React.Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      loaded: false
+    }
+
     this.sortReviews = this.sortReviews.bind(this);
   }
 
   componentDidMount(){
     this.props.fetchReviews();
+    this.setState({loaded: true})
   }
 
   sortReviews(){
@@ -20,7 +25,7 @@ class ThePub extends React.Component {
   }
 
   render() {
-    if (!this.props.reviews) {
+    if (!this.props.reviews && this.state.loaded) {
       return null
     } else {
       console.log(this.props)

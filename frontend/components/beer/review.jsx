@@ -1,6 +1,7 @@
 import React from 'react';
 import './review.css';
 import Rating from '../brewery_index/rating'
+import { Link } from 'react-router-dom';
 
 class Review extends React.Component {
 
@@ -30,7 +31,11 @@ class Review extends React.Component {
             </div>
             <div className="review-info">
               <div className="review-title">
-                  {this.props.review.user.username} is drinking a {this.props.beer.name} by {this.props.beer.breweryId}
+                  {this.props.review.user.username}
+                  <span> is drinking a </span>
+                  <Link className="beer-show-brewery" to={`/beer/${this.props.beer.id}`}>{this.props.beer.name}</Link>
+                  <span> by </span>
+                  <Link className="beer-show-brewery" to={`/brewery/${this.props.beer.brewery.id}`}>{this.props.beer.brewery.name}</Link>
               </div>
               <div className="quote-square"></div>
               <div className="review-body">
@@ -38,6 +43,13 @@ class Review extends React.Component {
                   {this.props.review.body}
                 </h2>
                 <Rating rating={this.props.review.rating} />
+              </div>
+              <div>
+                {this.props.review.photo ?
+                <img src={this.props.review.photo}/>
+                :
+                  null
+                }
               </div>
               <div className="created-at">
                 {this.formatDate(this.props.review.createdAt)}
