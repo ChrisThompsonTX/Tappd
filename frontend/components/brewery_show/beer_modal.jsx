@@ -15,7 +15,7 @@ class BeerModal extends React.Component {
             beerDescription: "",
             beerABV: "",
             beerIBU: "",
-            label: ""
+            label: "https://tappd-seeds.s3-us-west-1.amazonaws.com/BeerLabels/beer_label.png"
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,9 +33,10 @@ class BeerModal extends React.Component {
       rating: 5,
       description: this.state.beerDescription,
       abv: this.state.beerABV,
-      ibu: this.state.beerIBU
+      ibu: this.state.beerIBU,
+      label: this.state.label
     }
-
+    console.log(newBeer)
     this.props.createBeer(newBeer).then(res => {
         if (res.type === "RECEIVE_BEER_ERRORS") {
             return null;
@@ -67,7 +68,6 @@ class BeerModal extends React.Component {
   }
 
   render() {
-    console.log(Object.keys(this.props.breweries))
     return (
       <div className="modal-background" onClick={this.props.handleModal}>
         <div className="modal-child" onClick={e => e.stopPropagation()}>

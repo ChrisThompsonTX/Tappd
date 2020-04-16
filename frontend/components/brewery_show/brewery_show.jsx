@@ -79,7 +79,7 @@ class BreweryShow extends React.Component {
             <BeerModal 
               handleModal={this.handleModal} 
               createBeer={this.props.createBeer}
-              breweries={this.props.breweries.otherBreweries}
+              breweries={this.props.breweries}
               /> : null}
         </div>
       )

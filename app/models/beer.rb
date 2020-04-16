@@ -2,8 +2,7 @@ class Beer < ApplicationRecord
   
   validates :name, 
     :brewery_id, 
-    :style, 
-    :rating, 
+    :style,
     :description, 
     :abv, 
     :ibu, 

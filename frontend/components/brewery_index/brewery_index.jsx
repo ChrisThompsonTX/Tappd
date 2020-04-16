@@ -33,7 +33,7 @@ class BreweryIndex extends React.Component {
     }
 
     render(){
-        if (!this.props.breweries) {
+        if (this.props.breweries.otherBreweries || !this.props.breweries) {
             return null
         } else {
 

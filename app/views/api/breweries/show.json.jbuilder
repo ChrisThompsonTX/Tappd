@@ -21,7 +21,10 @@ json.breweries do
         json.set! brewery.id do
             json.extract! brewery,
                 :name,
-                :id
+                :id,
+                :beer_ids,
+                :review_ids
+            json.logo url_for(brewery.logo)
         end
     end
 end

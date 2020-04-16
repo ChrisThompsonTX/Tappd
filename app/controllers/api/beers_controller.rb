@@ -51,7 +51,8 @@ class Api::BeersController < ApplicationController
       :rating, 
       :description, 
       :abv, 
-      :ibu
+      :ibu,
+      :label
       )
   end
 

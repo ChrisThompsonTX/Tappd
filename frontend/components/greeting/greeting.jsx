@@ -8,8 +8,8 @@ const Greeting = (state) => {
             <header className="session-header">
                 <div className="left-header">
                     <img className="header-logo" src="https://untappd.akamaized.net/assets/v3/images/untappd-logo-2@2x.png" />
-                    <Link className="left-header-link"to="/home">The Pub</Link>
-                    <button>Top Rated</button>
+                    <button>The Pub</button>
+                    <Link className="left-header-link"to="/home">Top Rated</Link>
                     <button>Supporter</button>
                     <button>Help</button>
                 </div>
