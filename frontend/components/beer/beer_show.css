@@ -13,3 +13,24 @@
 .beer-show-review-container {
     width: 90%;
 }
+
+.beer-show-container .beer-name {
+    color: black;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.beer-show-brewery {
+    color: #c60;
+    text-decoration: none;
+}
+
+.more-button {
+    cursor: pointer;
+    color: #c60;
+}
+
+.beer-description {
+    padding: 1vh 0;
+    color: #999;
+}
