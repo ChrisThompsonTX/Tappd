@@ -76,7 +76,7 @@ class BeerShow extends React.Component {
             </header>
             <section className="beer-show-review-container">
               {this.props.beer.reviews.map((review,idx)=> {
-                return <Review review={review} beer={this.props.beer} key={idx} />
+                return <Review review={review} beer={this.props.beer} user={review.user} key={idx} />
               })}
             </section>
           </div>

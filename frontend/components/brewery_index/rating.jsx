@@ -22,20 +22,20 @@ const Rating = (props) => {
     const starFloat = parseFloat(props.rating);
 
     if (starInt === starFloat) {
-        for (var i = 0; i < starInt; i++) {
+        for (let i = 0; i < starInt; i++) {
             starDiv.push(<StarDiv key={i} />);
         }
-        for (var i = 4; i >= starInt; i--) {
+        for (let i = 4; i >= starInt; i--) {
             starDiv.push(<WhiteStarDiv key={i} />);
         }
     } else {
-        for (var i = 0; i < starInt; i++) {
+        for (let i = 0; i < starInt; i++) {
             starDiv.push(<StarDiv key={i} />);
         }
 
         starDiv.push(<HalfStarDiv key={starInt} />);
 
-        for (var i = 4; i >= starFloat; i--) {
+        for (let i = 4; i >= starFloat; i--) {
             starDiv.push(<WhiteStarDiv key={i} />);
         }
     }

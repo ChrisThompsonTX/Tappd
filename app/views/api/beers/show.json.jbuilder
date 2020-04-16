@@ -1,7 +1,9 @@
 json.partial! "api/beers/beer", beer: @beer
 
 json.reviews(@beer.reviews) do |review|
-    json.extract! review, :rating, :body, :user_id, :created_at
+    # json.extract! review, :rating, :body, :user_id, :created_at
+    # json.photo url_for(review.photo)
+    json.partial! "api/reviews/review", review: review
     json.user do
         json.partial! "api/users/user", user: review.user
     end

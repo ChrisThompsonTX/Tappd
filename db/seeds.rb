@@ -796,8 +796,8 @@ review1 = Review.create!({
     user_id: user1.id
     })
 
-photo1 = open('https://untappd.akamaized.net/photos/2020_04_11/340c1a31aba5cf6fee4571ed25b53a48_1280x1280.jpg')
-review1.photo.attach(io: photo1, filename: 'Bosteels-Deus.png')
+photo1 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/RealityCzech1.jpg')
+review1.photo.attach(io: photo1, filename: 'RealityCzech1.jpg')
 
 
 review2 = Review.create!({

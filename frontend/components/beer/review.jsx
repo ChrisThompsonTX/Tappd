@@ -22,20 +22,20 @@ class Review extends React.Component {
   }
 
   render() {
-
+    console.log(this.props.review)
     return (
       <div>
           <div className="review-container">
             <div className="profile-photo-container">
-              <img className="profile-photo" src={`${this.props.review.user.profilePhoto}`} />
+              <img className="profile-photo" src={`${this.props.user.profilePhoto}`} />
             </div>
             <div className="review-info">
               <div className="review-title">
-                  {this.props.review.user.username}
+                  {this.props.user.username}
                   <span> is drinking a </span>
                   <Link className="beer-show-brewery" to={`/beer/${this.props.beer.id}`}>{this.props.beer.name}</Link>
                   <span> by </span>
-                  <Link className="beer-show-brewery" to={`/brewery/${this.props.beer.brewery.id}`}>{this.props.beer.brewery.name}</Link>
+                  <Link className="beer-show-brewery" to={`/brewery/${this.props.beer.brewery_id}`}>{this.props.beer.brewery.name}</Link>
               </div>
               <div className="quote-square"></div>
               <div className="review-body">
@@ -44,9 +44,9 @@ class Review extends React.Component {
                 </h2>
                 <Rating rating={this.props.review.rating} />
               </div>
-              <div>
+              <div className="review-photo-container">
                 {this.props.review.photo ?
-                <img src={this.props.review.photo}/>
+                <img className="review-photo" src={this.props.review.photo}/>
                 :
                   null
                 }
