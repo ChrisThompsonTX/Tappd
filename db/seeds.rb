@@ -828,13 +828,16 @@ review5 = Review.create!({
     user_id: user5.id
     })
 
+photo2 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/DeathAndTaxes1.jpg')
+review5.photo.attach(io: photo2, filename: 'DeathAndTaxes1.jpg')
+
 review6 = Review.create!({
     rating: 5.0,
     body: "Desert island beer. One of my all time favorites.",
     beer_id: beer2.id,
     user_id: user2.id
     })
-
+    
 review7 = Review.create!({
     rating: 4.0,
     body: "Nice and malty. A nice change of pace for California.",
@@ -842,6 +845,9 @@ review7 = Review.create!({
     user_id: user3.id
     })
 
+photo3 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/DeathAndTaxes2.jpeg')
+review7.photo.attach(io: photo3, filename: 'DeathAndTaxes2.jpeg')
+        
 review8 = Review.create!({
     rating: 4.3,
     body: "Really interesting and unique flavor",
@@ -852,273 +858,328 @@ review8 = Review.create!({
 review9 = Review.create!({
     rating: 3.7,
     body: "Clean and very drinkable.",
-    beer_id: beer3.id,
+    beer_id: beer12.id,
     user_id: user4.id
     })
+
+photo4 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/BoneyFingers1.jpg')
+review9.photo.attach(io: photo4, filename: 'BoneyFingers1.jpg')
 
 review10 = Review.create!({
     rating: 3.9,
     body: "Dry as a bone. Heh. Get it? Bone. Heh.",
-    beer_id: beer3.id,
+    beer_id: beer12.id,
     user_id: user5.id
     })
 
 review11 = Review.create!({
     rating: 3.8,
     body: "More roasted than Death and Taxes, too much so, for my taste. Otherwise faultless, though, so still decent.",
-    beer_id: beer3.id,
+    beer_id: beer12.id,
     user_id: user3.id
     })
 
 review12 = Review.create!({
     rating: 4.0,
     body: "Light and crisp with anspice accent. Banana tasting on the backside.",
-    beer_id: beer4.id,
+    beer_id: beer3.id,
     user_id: user1.id
     })
+
+photo5 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/SeizonBretta1.jpg')
+review12.photo.attach(io: photo5, filename: 'SeizonBretta1.jpg')
+
 
 review13 = Review.create!({
     rating: 4.2,
     body: "4.2 Held up nicely over the years, 6?",
-    beer_id: beer4.id,
+    beer_id: beer3.id,
     user_id: user3.id
     })
 
 review14 = Review.create!({
     rating: 4.0,
     body: "Great funk and flavoring.",
-    beer_id: beer4.id,
+    beer_id: beer3.id,
     user_id: user4.id
     })
 
 review15 = Review.create!({
     rating: 4.2,
     body: "nice low sour, quite dry, citrus, dried fruits, dry wood in aftertaste, very balanced.",
-    beer_id: beer4.id,
+    beer_id: beer3.id,
     user_id: user5.id
     })
+
+photo6 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/SeizonBretta2.jpg')
+review15.photo.attach(io: photo6, filename: 'SeizonBretta2.jpg')
+
+
 
 review16 = Review.create!({
     rating: 3.3,
     body: "Meh maybe just not my preference but not the best tasting ale I’ve had",
-    beer_id: beer4.id,
+    beer_id: beer3.id,
     user_id: user2.id
     })
 
 review17 = Review.create!({
     rating: 4.2,
     body: "2017 bottles. Chalky. Funky. Not as acidic as expected. Delicious",
-    beer_id: beer5.id,
+    beer_id: beer4.id,
     user_id: user5.id
     })
+
+photo7 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/PechenBrett1.jpeg')
+review17.photo.attach(io: photo7, filename: 'PechenBrett1.jpeg')
 
 review18 = Review.create!({
     rating: 4.0,
     body: "Classic wood funk and subdued resonance. Lightly sour, subtle fruit, somewhat dry. Very enjoyable.",
-    beer_id: beer5.id,
+    beer_id: beer4.id,
     user_id: user4.id
     })
 
 review19 = Review.create!({
     rating: 4.5,
     body: "Tart and bright up front with a mellow woody peach finish. Super delicious",
-    beer_id: beer5.id,
+    beer_id: beer4.id,
     user_id: user2.id
     })
 
 review20 = Review.create!({
     rating: 4.0,
     body: "Probably the best pilsner I've ever tried. Would drink again.",
-    beer_id: beer6.id,
+    beer_id: beer5.id,
     user_id: user1.id
     })
+
+photo8 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/StsPils1.jpg')
+review20.photo.attach(io: photo8, filename: 'StsPils1.jpg')
 
 review21 = Review.create!({
     rating: 4.0,
     body: "Criiiiissssspppppiiiiiiii Boi",
-    beer_id: beer6.id,
+    beer_id: beer5.id,
     user_id: user5.id
     })
+
+photo9 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/StsPils2.jpg')
+review21.photo.attach(io: photo9, filename: 'StsPils2.jpg')
 
 review22 = Review.create!({
     rating: 4.1,
     body: "Brought home from San Francisco, smooth/not typical Pilsner. Perfectly clear brew, presents a perfectly clean taste.",
-    beer_id: beer6.id,
+    beer_id: beer5.id,
     user_id: user3.id
     })
 
 review23 = Review.create!({
     rating: 4.3,
     body: "Solid pils for a rainy Sunday afternoon",
-    beer_id: beer6.id,
+    beer_id: beer5.id,
     user_id: user4.id
     })
 
 review24 = Review.create!({
     rating: 3.7,
     body: "Tangy but refreshing!!",
-    beer_id: beer6.id,
+    beer_id: beer5.id,
     user_id: user2.id
     })
 
 review25 = Review.create!({
     rating: 4.5,
     body: "Citrus. Dry. Fresh cut grass.",
-    beer_id: beer7.id,
+    beer_id: beer6.id,
     user_id: user1.id
     })
+
+photo10 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/BlindPig1.jpg')
+review25.photo.attach(io: photo10, filename: 'BlindPig1.jpg')
 
 review26 = Review.create!({
     rating: 4.0,
     body: "Still a great IPA and a great history behind it.",
-    beer_id: beer7.id,
+    beer_id: beer6.id,
     user_id: user3.id
     })
 
 review27 = Review.create!({
     rating: 3.9,
     body: "Very clean crisp flavor. Nice hoppy flavor but nothing super dank or fruity.",
-    beer_id: beer7.id,
+    beer_id: beer6.id,
     user_id: user2.id
     })
+
+photo11 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/BlindPig2.jpg')
+review27.photo.attach(io: photo11, filename: 'BlindPig2.jpg')
 
 review28 = Review.create!({
     rating: 3.8,
     body: "Great Balanced Bitterness.",
-    beer_id: beer7.id,
+    beer_id: beer6.id,
     user_id: user5.id
     })
 
 review29 = Review.create!({
     rating: 4.4,
     body: "Sour in the beginning, but finishes off smooth!",
-    beer_id: beer8.id,
+    beer_id: beer7.id,
     user_id: user1.id
     })
 
 review30 = Review.create!({
     rating: 4.6,
     body: "Nice crisp taste with a unique flavor. That’s how you do a sour.",
-    beer_id: beer8.id,
+    beer_id: beer7.id,
     user_id: user4.id
     })
+
+photo12 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Supplication1.jpeg')
+review30.photo.attach(io: photo12, filename: 'Supplication1.jpeg')
 
 review31 = Review.create!({
     rating: 4.7,
     body: "Crazy how tastes change. Had this 2014 @ GABF. 2.5. Amazing now. Wasn't into sours then. World class.",
-    beer_id: beer8.id,
+    beer_id: beer7.id,
     user_id: user3.id
     })
+
+photo13 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Supplication2.jpg')
+review31.photo.attach(io: photo13, filename: 'Supplication2.jpg')
 
 review32 = Review.create!({
     rating: 3.9,
     body: "Taste pretty good....got to be a sour guy to really appreciate it.",
-    beer_id: beer8.id,
+    beer_id: beer7.id,
     user_id: user2.id
     })
 
 review33 = Review.create!({
     rating: 4.5,
     body: "Found a 2014 bottle of this stuff. Still amazing after all these years.",
-    beer_id: beer9.id,
+    beer_id: beer8.id,
     user_id: user1.id
     })
+
+photo14 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Temptation1.jpg')
+review33.photo.attach(io: photo14, filename: 'Temptation1.jpg')
 
 review34 = Review.create!({
     rating: 4.2,
     body: "Great stuff, good amount of citrusy sour funk from the Brett.",
-    beer_id: beer9.id,
+    beer_id: beer8.id,
     user_id: user4.id
     })
 
 review35 = Review.create!({
     rating: 4.4,
     body: "Super dry, tart and sour devilishly good!",
-    beer_id: beer9.id,
+    beer_id: beer8.id,
     user_id: user3.id
     })
+
+photo15 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Temptation2.jpg')
+review35.photo.attach(io: photo15, filename: 'Temptation2.jpg')
 
 review36 = Review.create!({
     rating: 5.0,
     body: "Best beer from the west coast.",
-    beer_id: beer10.id,
+    beer_id: beer9.id,
     user_id: user5.id
     })
 
 review37 = Review.create!({
     rating: 4.6,
     body: "A little carmely. Grapefruit. Delicious.",
-    beer_id: beer10.id,
+    beer_id: beer9.id,
     user_id: user1.id
     })
 
 review38 = Review.create!({
     rating: 3.1,
     body: "First Pliny!",
-    beer_id: beer10.id,
+    beer_id: beer9.id,
     user_id: user3.id
     })
 
 review39 = Review.create!({
     rating: 3.7,
     body: "Plenty of floral, resinous pine.",
-    beer_id: beer10.id,
+    beer_id: beer9.id,
     user_id: user4.id
     })
 
 review40 = Review.create!({
     rating: 4.5,
     body: "The Elder. Respect your elders.",
-    beer_id: beer10.id,
+    beer_id: beer9.id,
     user_id: user2.id
     })
+
+photo16 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Pliny1.jpg')
+review40.photo.attach(io: photo16, filename: 'Pliny1.jpg')
 
 review41 = Review.create!({
     rating: 4.9,
     body: "Great out of the bottle and on draft!",
-    beer_id: beer11.id,
+    beer_id: beer10.id,
     user_id: user3.id
     })
 
 review42 = Review.create!({
     rating: 4.2,
     body: "A: clear, golden, pale, light head // S: grape, green apple, grassy, honey // T: funky, farmhouse, oak, sour, citrus, floral, vinous // M: crisp, low carbonation, tannin",
-    beer_id: beer11.id,
+    beer_id: beer10.id,
     user_id: user5.id
     })
 
-Review43 = Review.create!({
+photo17 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Beatification1.jpg')
+review42.photo.attach(io: photo17, filename: 'Beatification1.jpg')
+
+review43 = Review.create!({
     rating: 4.0,
     body: "Wonderful. Dry, but tart and subtle fruity back end.",
-    beer_id: beer11.id,
+    beer_id: beer10.id,
     user_id: user2.id
     })
+
+photo18 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Beatification2.jpg')
+review43.photo.attach(io: photo18, filename: 'Beatification2.jpg')
 
 review44 = Review.create!({
     rating: 4.4,
     body: "Blessed be, holy Consecration! Pours a beautiful amber. Cabernet barrel present on the nose. Rich black currant, cherries, and oak highlight the profile. Always a treat.",
-    beer_id: beer12.id,
+    beer_id: beer11.id,
     user_id: user4.id
     })
+
+photo19 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Consecratoin1.jpg')
+review44.photo.attach(io: photo19, filename: 'Consecratoin1.jpg')
+
 
 review45 = Review.create!({
     rating: 4.0,
     body: "Had in my fridge for quite a while now. From my buddy. Dry, tart, oak.",
-    beer_id: beer12.id,
+    beer_id: beer11.id,
     user_id: user1.id
     })
 
 review46 = Review.create!({
     rating: 4.5,
     body: "Very good, getting a lot of cabernet sauvignon, not much currants. Lovely tart wild ale",
-    beer_id: beer12.id,
+    beer_id: beer11.id,
     user_id: user5.id
     })
+
+photo20 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Consecration2.jpg')
+review46.photo.attach(io: photo20, filename: 'Consecration2.jpg')
 
 review47 = Review.create!({
     rating: 4.1,
     body: "pretty good sour. fruity w barrel tones and a nice mouthfeel. I don’t like it when sours taste like liquid warheads",
-    beer_id: beer12.id,
+    beer_id: beer11.id,
     user_id: user3.id
     })
 
@@ -1128,6 +1189,9 @@ review48 = Review.create!({
     beer_id: beer13.id,
     user_id: user1.id
     })
+
+photo21 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Leifer1.jpg')
+review48.photo.attach(io: photo21, filename: 'Leifer1.jpg')
 
 review49 = Review.create!({
     rating: 4.2,
@@ -1157,6 +1221,9 @@ review52 = Review.create!({
     user_id: user3.id
     })
 
+photo22 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/CallToMind1.jpg')
+review52.photo.attach(io: photo22, filename: 'CallToMind1.jpg')
+
 review53 = Review.create!({
     rating: 4.3,
     body: "Held up really well over 2 years. Smooth and funky with hints of camomile.",
@@ -1171,12 +1238,18 @@ review54 = Review.create!({
     user_id: user5.id
     })
 
+photo23 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/CallToMind2.jpg')
+review54.photo.attach(io: photo23, filename: 'CallToMind2.jpg')
+
 review55 = Review.create!({
     rating: 3.8,
     body: "Nice and light, lemony. Not sour, has a a little funk to it.",
     beer_id: beer15.id,
     user_id: user3.id
     })
+
+photo24 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Whistlin1.jpg')
+review55.photo.attach(io: photo24, filename: 'Whistlin1.jpg')
 
 review56 = Review.create!({
     rating: 4.6,
@@ -1206,6 +1279,9 @@ review59 = Review.create!({
     user_id: user3.id
     })
 
+photo25 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Palatine1.jpg')
+review59.photo.attach(io: photo25, filename: 'Palatine1.jpg')
+
 review60 = Review.create!({
     rating: 3.8,
     body: "Bready and crispy.",
@@ -1226,6 +1302,9 @@ review62 = Review.create!({
     beer_id: beer17.id,
     user_id: user2.id
     })
+
+photo26 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Qualify1.jpg')
+review62.photo.attach(io: photo26, filename: 'Qualify1.jpg')
 
 review63 = Review.create!({
     rating: 4.3,
@@ -1269,6 +1348,9 @@ review68 = Review.create!({
     user_id: user3.id
     })
 
+photo27 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/CrispyLittle1.jpg')
+review68.photo.attach(io: photo27, filename: 'CrispyLittle1.jpg')
+
 review69 = Review.create!({
     rating: 4.7,
     body: "2 months past the “best by” date and still amazing. Oranges, biscuits, and a subtle hint of the fruity yeast character in the background. Solidly bitter close that also brings in pine notes. Fluffy base. Such a flavor bomb at 4.5%",
@@ -1297,6 +1379,9 @@ review72 = Review.create!({
     user_id: user2.id
     })
 
+photo28 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/HomeSpun1.jpg')
+review72.photo.attach(io: photo28, filename: 'HomeSpun1.jpg')
+
 review73 = Review.create!({
     rating: 4.2,
     body: "Light refreshing and flavorful. Slight bitterness on the backend and a hint of citrus. Quite enjoyable!",
@@ -1304,12 +1389,18 @@ review73 = Review.create!({
     user_id: user4.id
     })
 
+photo29 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/PetitPrince1.jpg')
+review73.photo.attach(io: photo29, filename: 'PetitPrince1.jpg')
+
 review74 = Review.create!({
     rating: 2.5,
     body: "Bitter to me but tasty nonetheless",
     beer_id: beer20.id,
     user_id: user1.id
     })
+
+photo30 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/PetitPrince2.jpg')
+review74.photo.attach(io: photo30, filename: 'PetitPrince2.jpg')
 
 review75 = Review.create!({
     rating: 3.5,
@@ -1339,6 +1430,9 @@ review78 = Review.create!({
     user_id: user3.id
     })
 
+photo31 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/DasWunderkind1.jpg')
+review78.photo.attach(io: photo31, filename: 'DasWunderkind1.jpg')
+
 review79 = Review.create!({
     rating: 3.8,
     body: "A very tasty brew a little more on the sour side than I am accustomed to Saisons being but I like it.",
@@ -1360,6 +1454,9 @@ review81 = Review.create!({
     user_id: user2.id
     })
 
+photo32 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/FunkMetal1.jpg')
+review81.photo.attach(io: photo32, filename: 'FunkMetal1.jpg')
+
 review82 = Review.create!({
     rating: 3.3,
     body: "Got really grossed out by the smell of it but it tastes a lot better than I thought.",
@@ -1374,12 +1471,18 @@ review83 = Review.create!({
     user_id: user4.id
     })
 
+photo33 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/FunkMetal2.jpg')
+review83.photo.attach(io: photo33, filename: 'FunkMetal2.jpg')
+
 review84 = Review.create!({
     rating: 4.4,
     body: "Aroma of sweet raspberry jam, pleasantly surprised by the tartness and lack of sweetness.",
     beer_id: beer23.id,
     user_id: user5.id
     })
+
+photo34 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Atrial1.jpg')
+review84.photo.attach(io: photo34, filename: 'Atrial1.jpg')
 
 review85 = Review.create!({
     rating: 4.5,
@@ -1402,6 +1505,9 @@ review87 = Review.create!({
     user_id: user3.id
     })
 
+photo35 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Atrial2.jpg')
+review87.photo.attach(io: photo35, filename: 'Atrial2.jpg')
+
 review88 = Review.create!({
     rating: 3.8,
     body: "Interesting choice to sour a low abv English mild. I like it.",
@@ -1423,6 +1529,9 @@ review90 = Review.create!({
     user_id: user1.id
     })
 
+photo36 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/CommercialSuicide1.jpg')
+review90.photo.attach(io: photo36, filename: 'CommercialSuicide1.jpg')
+
 review91 = Review.create!({
     rating: 4.5,
     body: "Still great. More tart than I recall. Funky cherry and some underlying pie spices.",
@@ -1430,12 +1539,18 @@ review91 = Review.create!({
     user_id: user5.id
     })
 
+photo37 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/ModerneDansk1.jpg')
+review91.photo.attach(io: photo37, filename: 'ModerneDansk1.jpg')
+
 review92 = Review.create!({
     rating: 4.6,
     body: "This is really good. Very subtle. Dry wood tannins, cherry, sweet soft sour. Amazing. So well balanced.",
     beer_id: beer25.id,
     user_id: user1.id
     })
+
+photo38 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/ModerneDansk2.jpg')
+review92.photo.attach(io: photo38, filename: 'ModerneDansk2.jpg')
 
 review93 = Review.create!({
     rating: 4.4,
@@ -1465,6 +1580,9 @@ review96 = Review.create!({
     user_id: user4.id
     })
 
+photo39 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/RU55.jpg')
+review96.photo.attach(io: photo39, filename: 'RU55.jpg')
+
 review97 = Review.create!({
     rating: 4.0,
     body: "Looking for a bit more funk and less acidity. Not bad though.",
@@ -1478,6 +1596,9 @@ review98 = Review.create!({
     beer_id: beer27.id,
     user_id: user3.id
     })
+
+photo40 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/BiereDeBlancDuBois1.jpg')
+review98.photo.attach(io: photo40, filename: 'BiereDeBlancDuBois1.jpg')
 
 review99 = Review.create!({
     rating: 3.0,
@@ -1507,6 +1628,9 @@ review102 = Review.create!({
     user_id: user2.id
     })
 
+photo41 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Curieux1.jpg')
+review102.photo.attach(io: photo41, filename: 'Curieux1.jpg')
+
 review103 = Review.create!({
     rating: 4.0,
     body: "Belgiany spices & fruit flavors. Full-bodied, yet light. Instead of Acadia for spring break this year, it’s just a deck chair and Maine beer.",
@@ -1520,6 +1644,9 @@ review104 = Review.create!({
     beer_id: beer28.id,
     user_id: user1.id
     })
+
+photo42 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Curieux2.jpg')
+review104.photo.attach(io: photo42, filename: 'Curieux2.jpg')
 
 review105 = Review.create!({
     rating: 4.5,
@@ -1548,6 +1675,9 @@ review108 = Review.create!({
     beer_id: beer29.id,
     user_id: user1.id
     })
+
+photo43 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/White1.jpg')
+review108.photo.attach(io: photo43, filename: 'White1.jpg')
 
 review109 = Review.create!({
     rating: 5.0,
@@ -1584,6 +1714,9 @@ review113 = Review.create!({
     user_id: user4.id
     })
 
+photo44 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Mattina1.jpg')
+review113.photo.attach(io: photo44, filename: 'Mattina1.jpg')
+
 review114 = Review.create!({
     rating: 4.5,
     body: "Wow! My tastebuds are standing at attention. Puckering sour from the get-go with raspberry blasting through. Great barrel-aged taste.",
@@ -1612,6 +1745,9 @@ review117 = Review.create!({
     user_id: user3.id
     })
 
+photo45 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Coolship1.jpg')
+review117.photo.attach(io: photo45, filename: 'Coolship1.jpg')
+
 review118 = Review.create!({
     rating: 4.4,
     body: "Allagash is one of a handful of American breweries who makes consistent wild ales with restrained acidity.",
@@ -1625,6 +1761,9 @@ review119 = Review.create!({
     beer_id: beer31.id,
     user_id: user2.id
     })
+
+photo46 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Coolship2.jpg')
+review119.photo.attach(io: photo46, filename: 'Coolship2.jpg')
 
 review120 = Review.create!({
     rating: 4.0,
@@ -1640,12 +1779,18 @@ review121 = Review.create!({
     user_id: user2.id
     })
 
+photo47 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/FarmToFace1.jpg')
+review121.photo.attach(io: photo47, filename: 'FarmToFace1.jpg')
+
 review122 = Review.create!({
     rating: 3.8,
     body: "Bit of a bottle bomb. This half of glass is good though.",
     beer_id: beer32.id,
     user_id: user4.id
     })
+
+photo48 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/FarmToFace2.jpg')
+review122.photo.attach(io: photo48, filename: 'FarmToFace2.jpg')
 
 review123 = Review.create!({
     rating: 4.1,
@@ -1660,6 +1805,9 @@ review124 = Review.create!({
     beer_id: beer33.id,
     user_id: user1.id
     })
+
+photo49 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/PaleAle1.jpg')
+review124.photo.attach(io: photo49, filename: 'PaleAle1.jpg')
 
 review125 = Review.create!({
     rating: 3.3,
@@ -1682,12 +1830,18 @@ review127 = Review.create!({
     user_id: user4.id
     })
 
+photo50 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/PaleAle2.jpg')
+review127.photo.attach(io: photo50, filename: 'PaleAle2.jpg')
+
 review128 = Review.create!({
     rating: 4.0,
     body: "Great carmel malty sweet nose, nice medium body, Piney hop bite To the finish, quite tasty",
     beer_id: beer34.id,
     user_id: user5.id
     })
+
+photo51 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Celebration1.jpg')
+review128.photo.attach(io: photo51, filename: 'Celebration1.jpg')
 
 review129 = Review.create!({
     rating: 3.5,
@@ -1724,6 +1878,9 @@ review133 = Review.create!({
     user_id: user3.id
     })
 
+photo52 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Narwhal1.jpg')
+review133.photo.attach(io: photo52, filename: 'Narwhal1.jpg')
+
 review134 = Review.create!({
     rating: 4.4,
     body: "Can't tell if the after taste is just that good or if it mixed well with my toothpaste.",
@@ -1744,6 +1901,9 @@ review136 = Review.create!({
     beer_id: beer36.id,
     user_id: user2.id
     })
+
+photo53 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Ruthless1.jpeg')
+review136.photo.attach(io: photo53, filename: 'Ruthless1.jpeg')
 
 review137 = Review.create!({
     rating: 3.7,
@@ -1780,12 +1940,18 @@ review141 = Review.create!({
     user_id: user1.id
     })
 
+photo54 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Bernice1.jpg')
+review141.photo.attach(io: photo54, filename: 'Bernice1.jpg')
+
 review142 = Review.create!({
     rating: 5.0,
     body: "I think I put this bottle in the cellar in 2016. It has aged well. Sweet start, dry finish, nice 'brettyness'.",
     beer_id: beer37.id,
     user_id: user3.id
     })
+
+photo55 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Bernice2.jpg')
+review142.photo.attach(io: photo55, filename: 'Bernice2.jpg')
 
 review143 = Review.create!({
     rating: 4.6,
@@ -1814,6 +1980,9 @@ review146 = Review.create!({
     beer_id: beer38.id,
     user_id: user3.id
     })
+
+photo56 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/WestAshley1.jpg')
+review146.photo.attach(io: photo56, filename: 'WestAshley1.jpg')
 
 review147 = Review.create!({
     rating: 4.6,
@@ -1850,6 +2019,9 @@ review151 = Review.create!({
     user_id: user1.id
     })
 
+photo57 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/TomorrowToday.jpg')
+review151.photo.attach(io: photo57, filename: 'TomorrowToday.jpg')
+
 review152 = Review.create!({
     rating: 4.1,
     body: "Good batch, but not the best I’ve had. Still one of my favorite IPA’s by SARA or anyone else. Lots of apricot and guava. Creamy and bitter.",
@@ -1871,12 +2043,18 @@ review154 = Review.create!({
     user_id: user1.id
     })
 
+photo58 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/SouthernSunrise1.jpg')
+review154.photo.attach(io: photo58, filename: 'SouthernSunrise1.jpg')
+
 review155 = Review.create!({
     rating: 4.8,
     body: "Fruit has faded but starting to develop some old sante funk and love.",
     beer_id: beer40.id,
     user_id: user2.id
     })
+
+photo59 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/SouthernSunrise2.jpg')
+review155.photo.attach(io: photo59, filename: 'SouthernSunrise2.jpg')
 
 review156 = Review.create!({
     rating: 4.7,
@@ -1905,6 +2083,9 @@ review159 = Review.create!({
     beer_id: beer41.id,
     user_id: user2.id
     })
+
+photo60 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Trumer1.jpg')
+review159.photo.attach(io: photo60, filename: 'Trumer1.jpg')
 
 
 review160 = Review.create!({
@@ -1945,6 +2126,9 @@ review163 = Review.create!({
     user_id: user2.id
     })
 
+photo61 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/TripelKarmeliet1.jpg')
+review163.photo.attach(io: photo61, filename: 'TripelKarmeliet1.jpg')
+
 review164 = Review.create!({
     rating: 4.3,
     body: "A classic. Always a good & tasty one.",
@@ -1959,12 +2143,18 @@ review165 = Review.create!({
     user_id: user1.id
     })
 
+photo62 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/TripelKarmeliet2.jpg')
+review165.photo.attach(io: photo62, filename: 'TripelKarmeliet2.jpg')
+
 review166 = Review.create!({
     rating: 3.0,
     body: "Disappointingly 'soft' and matching body compared to what memories I had of this beer.",
     beer_id: beer43.id,
     user_id: user5.id
     })
+
+photo63 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Kwak1.jpg')
+review166.photo.attach(io: photo63, filename: 'Kwak1.jpg')
 
 review167 = Review.create!({
     rating: 4.5,
@@ -1986,6 +2176,9 @@ review169 = Review.create!({
     beer_id: beer44.id,
     user_id: user1.id
     })
+
+photo64 = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ReviewPhotos/Deus1.jpg')
+review169.photo.attach(io: photo64, filename: 'Deus1.jpg')
 
 review170 = Review.create!({
     rating: 4.3,

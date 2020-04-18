@@ -49,14 +49,11 @@ class ThePub extends React.Component {
                 <h4 className="title" >Recent Global Activity</h4>
               </div>
               <div className="reviews">
-                {/* {Object.keys(this.props.reviews).map((reviewId => (
-                  <Review key={reviewId} user={this.props.reviews[reviewId].user} review={this.props.reviews[reviewId]} beer={this.props.reviews[reviewId].beer} />
-                )))} */}
                 {this.shuffle(Object.keys(this.props.reviews)).slice(0,this.state.display).map((reviewId => (
                   <Review key={reviewId} user={this.props.reviews[reviewId].user} review={this.props.reviews[reviewId]} beer={this.props.reviews[reviewId].beer} />
                 )))}
-                <div onClick={this.handleClick}>
-                    Show More
+                <div className="more-container" onClick={this.handleClick}>
+                  <h2 className="more-reviews-button" >Show More</h2>
                 </div>
               </div>
             </section>

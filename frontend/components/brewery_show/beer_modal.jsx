@@ -30,7 +30,7 @@ class BeerModal extends React.Component {
       name: this.state.beerName,
       brewery_id: breweryId,
       style: this.state.beerStyle,
-      rating: 5,
+      rating: 5.0,
       description: this.state.beerDescription,
       abv: this.state.beerABV,
       ibu: this.state.beerIBU,

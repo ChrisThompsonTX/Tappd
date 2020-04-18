@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import './beer_show.css';
 import Review from './review'
 import Rating from '../brewery_index/rating'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import ReviewModal from './review_modal'
 
 class BeerShow extends React.Component {
 
@@ -10,9 +13,11 @@ class BeerShow extends React.Component {
     super(props)
 
     this.state = {
+      openModal: false,
       more: false
     }
 
+    this.handleModal = this.handleModal.bind(this);
     this.handleMore = this.handleMore.bind(this);
   }
 
@@ -24,6 +29,19 @@ class BeerShow extends React.Component {
       this.setState({more: true})
     }
   }
+
+  handleModal(e) {
+    e.preventDefault();
+    if (this.state.openModal === false) {
+      this.setState({
+        openModal: true
+      })
+    } else {
+      this.setState({
+        openModal: false
+      })
+    }
+  };  
 
   componentDidMount() {
     this.props.fetchBeer(this.props.match.params.beerId)
@@ -46,6 +64,9 @@ class BeerShow extends React.Component {
                     <Link className="beer-show-brewery" to={`/brewery/${this.props.beer.brewery.id}`}> {this.props.beer.brewery.name}</Link>
                     <h2 className="brewery-name" >{this.props.beer.brewery_id}</h2>
                     <h3>{this.props.beer.style}</h3>
+                  </div>
+                  <div className="review-modal-container">
+                    <button className="review-modal-button" onClick={this.handleModal}><FontAwesomeIcon className="checkin-beer" icon={faCheck} color="white" size="2x" /></button>
                   </div>
                 </div>
                 <div className="beer-container-bottom">
@@ -79,6 +100,13 @@ class BeerShow extends React.Component {
                 return <Review review={review} beer={this.props.beer} user={review.user} key={idx} />
               })}
             </section>
+            {this.state.openModal === true ?
+              <ReviewModal
+                beer={this.props.beer}
+                user_id={this.props.user_id}
+                createReview={this.props.createReview}
+                handleModal={this.handleModal}
+              /> : null}
           </div>
         </div>
       )
