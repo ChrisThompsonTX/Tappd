@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Review from '../beer/review'
 import './the_pub.css'
+import { trackPromise } from 'react-promise-tracker'
 
 class ThePub extends React.Component {
 
@@ -31,8 +32,15 @@ class ThePub extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchReviews();
-    this.setState({loaded: true})
+    trackPromise(
+      this.props.fetchReviews()
+        .then((reviews)=>{
+          this.setState({
+            loaded: true,
+            reviews
+          })
+        })
+    )
   }
 
 
