@@ -34,3 +34,44 @@
     padding: 1vh 0;
     color: #999;
 }
+
+.beer-container-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.beer-info-left {
+    display: flex;
+}
+
+.beer-show-info {
+    padding: 1vw 0;
+}
+
+.review-modal-container {
+    background-color: #fc0;
+    padding: 1vw;
+    cursor: pointer;
+    border-radius: 5px;
+
+    position: relative;
+    display: inline-block;
+}
+
+.review-modal-container .tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    width: 150px;
+    margin-top: 1vw;
+    right: -50px;
+    border-radius: 5px;
+    padding: 0 .5vw;
+}
+
+.review-modal-container:hover .tooltip {
+    visibility: visible;
+}

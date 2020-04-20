@@ -92,7 +92,7 @@
 
 .add-photo-button {
   background-color: #fc0;
-  padding: .6vw;
+  padding: 10px;
   cursor: pointer;
   display: flex;
   justify-content: center;

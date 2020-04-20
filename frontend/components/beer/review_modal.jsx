@@ -2,7 +2,6 @@ import React from 'react';
 import './review_modal.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import Slider from './slider'
 
 class ReviewModal extends React.Component {
 
@@ -10,7 +9,7 @@ class ReviewModal extends React.Component {
         super(props);
 
         this.state = {
-            rating: 5.0,
+            rating: 0,
             body: "",
             photo: ""
         }
@@ -64,7 +63,6 @@ class ReviewModal extends React.Component {
                             <div className="beer-name-input">
                                 <div className="beer-name-container">
                                     <label>
-                                        <span>Beer Description:</span>
                                         <div>
                                             <textarea
                                                 required
@@ -98,9 +96,21 @@ class ReviewModal extends React.Component {
                             </div>
                         </div>
                         <div className="create-row">
-                            <div className="beer-name-input">
-                                <div className="beer-name-container">
-                                    <Slider></Slider>
+                            <div className="slider-container">
+                                <input
+                                    type="range"
+                                    min={0}
+                                    max={20}
+                                    value={this.state.rating}
+                                    className="slider"
+                                    onChange={this.handleChange("rating")}
+                                />
+                                <div className="value">
+                                    <div className="rating-pointer" />
+                                    <p>
+                                        {this.state.rating === 0 ? "NO" : this.state.rating * 0.25}
+                                        <span>{this.state.rating === 0 ? "RATING" : "STARS" }</span>
+                                    </p> 
                                 </div>
                             </div>
                             <div className="submit-container">

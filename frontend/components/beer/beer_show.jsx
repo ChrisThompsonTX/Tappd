@@ -58,15 +58,18 @@ class BeerShow extends React.Component {
             <header>
               <div className="beer-container">
                 <div className="beer-container-top">
-                  <img className="beer-show-label" src={this.props.beer.label} />
-                  <div className="beer-show-info">
-                    <h1 className="beer-name">{this.props.beer.name}</h1>
-                    <Link className="beer-show-brewery" to={`/brewery/${this.props.beer.brewery.id}`}> {this.props.beer.brewery.name}</Link>
-                    <h2 className="brewery-name" >{this.props.beer.brewery_id}</h2>
-                    <h3>{this.props.beer.style}</h3>
+                  <div className="beer-info-left">
+                    <img className="beer-show-label" src={this.props.beer.label} />
+                    <div className="beer-show-info">
+                      <h1 className="beer-name">{this.props.beer.name}</h1>
+                      <Link className="beer-show-brewery" to={`/brewery/${this.props.beer.brewery.id}`}> {this.props.beer.brewery.name}</Link>
+                      <h2 className="brewery-name" >{this.props.beer.brewery_id}</h2>
+                      <h3>{this.props.beer.style}</h3>
+                    </div>
                   </div>
                   <div className="review-modal-container">
-                    <button className="review-modal-button" onClick={this.handleModal}><FontAwesomeIcon className="checkin-beer" icon={faCheck} color="white" size="2x" /></button>
+                    <div className="review-modal-button" onClick={this.handleModal}><FontAwesomeIcon className="checkin-beer" icon={faCheck} color="white" size="2x" /></div>
+                    <span class="tooltip">Check-in this Beer</span>
                   </div>
                 </div>
                 <div className="beer-container-bottom">
