@@ -57,7 +57,7 @@ class BeerShow extends React.Component {
           <div className="beer-show">
             <header>
               <div className="beer-container">
-                <div className="beer-container-top">
+                <div className="beer-show-container-top">
                   <div className="beer-info-left">
                     <img className="beer-show-label" src={this.props.beer.label} />
                     <div className="beer-show-info">

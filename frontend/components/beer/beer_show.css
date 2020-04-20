@@ -35,9 +35,10 @@
     color: #999;
 }
 
-.beer-container-top {
+.beer-show-container-top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .beer-info-left {
