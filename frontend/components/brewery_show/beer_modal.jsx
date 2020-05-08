@@ -36,7 +36,6 @@ class BeerModal extends React.Component {
       ibu: this.state.beerIBU,
       label: this.state.label
     }
-    console.log(newBeer)
     this.props.createBeer(newBeer).then(res => {
         if (res.type === "RECEIVE_BEER_ERRORS") {
             return null;

@@ -1,4 +1,7 @@
+require 'open-uri'
+
 class Api::BreweriesController < ApplicationController
+    ActionController::Parameters.permit_all_parameters = true
 
     def index
         @breweries = Brewery.all
@@ -12,8 +15,13 @@ class Api::BreweriesController < ApplicationController
     end
 
     def create
-        @brewery = Brewery.new(brewery_params)
-
+        # logo = open(brewery_params[:logo])
+        # brewery_params = brewery_params.except(:logo)
+        debugger
+        @brewery = Brewery.new(params)
+        debugger
+        # filename = brewery_params.logo.split("/").last
+        # @brewrey.logo.attach(io: logo, filename: filename )
         if @brewery.save
             render :show
         else
@@ -41,6 +49,7 @@ class Api::BreweriesController < ApplicationController
     private
 
     def brewery_params
+        # debugger
         params.require(:brewery).permit(
             :name,
             :address,
@@ -49,9 +58,8 @@ class Api::BreweriesController < ApplicationController
             :country,
             :description,
             :rating,
-            :lat,
-            :lng,
-            :logo
+            :logo => [:name, :lastModified, :lastModifiedDate, :webkitRelativePath, :size, :type]
         )
+        # debugger
     end
 end

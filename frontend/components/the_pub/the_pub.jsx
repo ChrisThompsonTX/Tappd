@@ -48,7 +48,6 @@ class ThePub extends React.Component {
     if (!this.props.reviews && this.state.loaded) {
       return null
     } else {
-      console.log(this.state)
       return (
         <div>
           <div className="brewery-index-container">

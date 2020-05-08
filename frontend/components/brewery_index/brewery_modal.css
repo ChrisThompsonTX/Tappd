@@ -16,7 +16,7 @@
   z-index: 11;
   background-color: white;
   width: 45vw;
-  height: 40vh;
+  height: fit-content;
   font-family: 'Poppins', sans-serif;
 }
 

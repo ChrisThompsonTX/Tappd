@@ -48,7 +48,6 @@ class BeerShow extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     if (!this.props.beer || !this.props.beer.id) {
       return null
     } else {
@@ -69,7 +68,7 @@ class BeerShow extends React.Component {
                   </div>
                   <div className="review-modal-container">
                     <div className="review-modal-button" onClick={this.handleModal}><FontAwesomeIcon className="checkin-beer" icon={faCheck} color="white" size="2x" /></div>
-                    <span class="tooltip">Check-in this Beer</span>
+                    <span className="tooltip">Check-in this Beer</span>
                   </div>
                 </div>
                 <div className="beer-container-bottom">

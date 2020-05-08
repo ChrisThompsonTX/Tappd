@@ -25,7 +25,7 @@ class BreweryModal extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
+    
     const newBrewery = {
       name: this.state.breweryName,
       address: this.state.breweryAddress,
@@ -36,7 +36,7 @@ class BreweryModal extends React.Component {
       rating: 5.0,
       logo: this.state.logo
     }
-
+    console.log(newBrewery)
     this.props.createBrewery(newBrewery).then(res => {
       if (res.type === "RECEIVE_BREWERY_ERRORS") {
         return null;
@@ -62,7 +62,7 @@ class BreweryModal extends React.Component {
       } else if (type === "breweryDescription") {
         that.setState({ breweryDescription: e.target.value });
       } else if (type === "image") {
-        that.setState({logo: e.target.value})
+        that.setState({logo: e.target.files[0]})
       }
     };
   }
@@ -114,7 +114,7 @@ class BreweryModal extends React.Component {
               <div className="brewery-image-input">
                 <div className="brewery-image-container">
                   <div>
-                    <label for="file-upload" className="add-photo-button">
+                    <label htmlFor="file-upload" className="add-photo-button">
                       <img className="add-photo-icon" src="https://untappd.akamaized.net/assets/v3/images/ico_checkin_photo.png"/>
                     </label>
                       <input
@@ -122,7 +122,7 @@ class BreweryModal extends React.Component {
                         id="file-upload"
                         className="image-upload"
                         type="file"
-                        accept="image/*"
+                        // accept="image/*"
                         onChange={this.handleChange("image")}
                         >
                       </input>

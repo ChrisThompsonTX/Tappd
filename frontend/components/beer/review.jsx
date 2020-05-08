@@ -22,7 +22,6 @@ class Review extends React.Component {
   }
 
   render() {
-    console.log(this.props.review)
     return (
       <div>
           <div className="review-container">
