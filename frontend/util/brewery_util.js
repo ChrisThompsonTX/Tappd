@@ -12,17 +12,15 @@ export const fetchBreweries = () => (
     })
 );
 
-export const createBrewery = brewery => {
-    // debugger
-    brewery = JSON.parse(JSON.stringify(brewery))
-    return $.ajax({
+export const createBrewery = brewery => (
+    $.ajax({
         method: 'POST',
         url: '/api/breweries',
-        data: {foo: "bar"},
+        data: brewery,
         processData: false,
         contentType: false
     })
-};
+);
 
 export const updateBrewery = brewery => (
     $.ajax({

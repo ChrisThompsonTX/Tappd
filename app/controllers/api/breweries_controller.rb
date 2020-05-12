@@ -15,13 +15,8 @@ class Api::BreweriesController < ApplicationController
     end
 
     def create
-        # logo = open(brewery_params[:logo])
-        # brewery_params = brewery_params.except(:logo)
-        debugger
-        @brewery = Brewery.new(params)
-        debugger
-        # filename = brewery_params.logo.split("/").last
-        # @brewrey.logo.attach(io: logo, filename: filename )
+        @brewery = Brewery.new(params.except(:format, :controller, :action))
+        @breweries = Brewery.all
         if @brewery.save
             render :show
         else

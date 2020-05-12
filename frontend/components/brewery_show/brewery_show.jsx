@@ -45,7 +45,8 @@ class BreweryShow extends React.Component {
   }
 
   render() {
-    if (!this.props.brewery || !this.props.brewery.beers)  {
+    if (!this.props.brewery){
+      //  || !this.props.brewery.beers)  {
       return null
     } else {
       return (
@@ -93,9 +94,12 @@ class BreweryShow extends React.Component {
               </div>
             </header>
             <div className="beers-list">
-              {Object.values(this.props.brewery.beers).map((beer)=>(
-                <BreweryShowItem key={beer.id} beer={beer} />
-              ))}
+              {!this.props.brewery.beers? 
+                null :
+                  Object.values(this.props.brewery.beers).map((beer)=>(
+                  <BreweryShowItem key={beer.id} beer={beer} />
+                ))
+              }
             </div>
             <div className="modal-container">
               <button className="modal-button" onClick={this.handleModal}>ADD A BEER +</button>

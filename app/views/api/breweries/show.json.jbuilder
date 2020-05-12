@@ -7,7 +7,7 @@ json.partial! "api/breweries/brewery", brewery: @brewery
 #         end
 #     end
 # end
-
+# if @brewery.beers do
 json.beers do
     @brewery.beers.each do |beer|
         json.set! beer.id do
@@ -15,6 +15,7 @@ json.beers do
         end
     end
 end
+# end
 
 json.breweries do
     @breweries.each do |brewery|

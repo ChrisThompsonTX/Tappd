@@ -24,19 +24,28 @@ class BeerModal extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const breweryId = this.state.breweryName.id
+    const formData = new FormData();
 
-    const newBeer = {
-      name: this.state.beerName,
-      brewery_id: breweryId,
-      style: this.state.beerStyle,
-      rating: 5.0,
-      description: this.state.beerDescription,
-      abv: this.state.beerABV,
-      ibu: this.state.beerIBU,
-      label: this.state.label
-    }
-    this.props.createBeer(newBeer).then(res => {
+    formData.append("name", this.state.beerName)
+    formData.append("brewery_id", this.state.breweryName.id)
+    formData.append("style", this.state.beerStyle)
+    formData.append("rating", 5.0)
+    formData.append("description", this.state.beerDescription)
+    formData.append("abv", this.state.beerABV)
+    formData.append("ibu", this.state.beerIBU)
+    formData.append("label", this.state.label)
+
+    // const newBeer = {
+    //   name: this.state.beerName,
+    //   brewery_id: this.state.breweryName.id,
+    //   style: this.state.beerStyle,
+    //   rating: 5.0,
+    //   description: this.state.beerDescription,
+    //   abv: this.state.beerABV,
+    //   ibu: this.state.beerIBU,
+    //   label: this.state.label
+    // }
+    this.props.createBeer(formData).then(res => {
         if (res.type === "RECEIVE_BEER_ERRORS") {
             return null;
         } else if (res.type === "RECEIVE_BEER") {

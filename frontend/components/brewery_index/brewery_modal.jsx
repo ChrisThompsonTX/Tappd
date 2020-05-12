@@ -25,19 +25,30 @@ class BreweryModal extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    
-    const newBrewery = {
-      name: this.state.breweryName,
-      address: this.state.breweryAddress,
-      city: this.state.breweryCity,
-      state: this.state.breweryState,
-      country: this.state.breweryCountry,
-      description: this.state.breweryDescription,
-      rating: 5.0,
-      logo: this.state.logo
-    }
-    console.log(newBrewery)
-    this.props.createBrewery(newBrewery).then(res => {
+    const formData = new FormData();
+
+    // const newBrewery = {
+    //   name: this.state.breweryName,
+    //   address: this.state.breweryAddress,
+    //   city: this.state.breweryCity,
+    //   state: this.state.breweryState,
+    //   country: this.state.breweryCountry,
+    //   description: this.state.breweryDescription,
+    //   rating: 5.0,
+    //   logo: this.state.logo
+    // }
+    formData.append("name", this.state.breweryName)
+    formData.append("address", this.state.breweryAddress)
+    formData.append("city", this.state.breweryCity)
+    formData.append("state", this.state.breweryState)
+    formData.append("country", this.state.breweryCountry)
+    formData.append("description", this.state.breweryDescription)
+    formData.append("rating", 5.0)
+    formData.append("logo", this.state.logo)
+
+
+    // console.log(newBrewery)
+    this.props.createBrewery(formData).then(res => {
       if (res.type === "RECEIVE_BREWERY_ERRORS") {
         return null;
       } else if (res.type === "RECEIVE_BREWERY") {
