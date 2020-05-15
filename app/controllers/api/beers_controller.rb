@@ -1,5 +1,5 @@
 class Api::BeersController < ApplicationController
-    ActionController::Parameters.permit_all_parameters = true
+  ActionController::Parameters.permit_all_parameters = true
 
 
   def index
@@ -18,7 +18,6 @@ class Api::BeersController < ApplicationController
   
   def create
     @beer = Beer.new(params.except(:format, :controller, :action))
-
     if @beer.save
       render :show
     else

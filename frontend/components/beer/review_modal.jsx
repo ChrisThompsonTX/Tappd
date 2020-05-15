@@ -11,7 +11,7 @@ class ReviewModal extends React.Component {
         this.state = {
             rating: 0,
             body: "",
-            photo: ""
+            photo: null
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,15 +20,15 @@ class ReviewModal extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        const formData = new FormData();
 
-        const newReview = {
-            rating: this.state.rating,
-            body: this.state.body,
-            beer_id: this.props.beer.id,
-            user_id: this.props.user_id,
-            photo: this.state.photo
-        }
-        this.props.createReview(newReview).then(res => {
+        formData.append("rating", (this.state.rating / 4))
+        formData.append("body", this.state.body)
+        formData.append("beer_id", this.props.beer.id)
+        formData.append("user_id", this.props.user_id)
+        formData.append("photo", this.state.photo)
+
+        this.props.createReview(formData).then(res => {
             if (res.type === "RECEIVE_BEER_ERRORS") {
                 return null;
             } else if (res.type === "RECEIVE_BEER") {
@@ -45,7 +45,7 @@ class ReviewModal extends React.Component {
             } else if (type === "description") {
                 that.setState({ body: e.target.value });
             } else if (type === "photo") {
-                that.setState({ photo: e.target.value });
+                that.setState({ photo: e.target.files[0] });
             }
         };
     }

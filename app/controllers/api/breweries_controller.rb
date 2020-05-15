@@ -44,7 +44,6 @@ class Api::BreweriesController < ApplicationController
     private
 
     def brewery_params
-        # debugger
         params.require(:brewery).permit(
             :name,
             :address,
@@ -55,6 +54,5 @@ class Api::BreweriesController < ApplicationController
             :rating,
             :logo => [:name, :lastModified, :lastModifiedDate, :webkitRelativePath, :size, :type]
         )
-        # debugger
     end
 end

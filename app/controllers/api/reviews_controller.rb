@@ -1,4 +1,5 @@
 class Api::ReviewsController < ApplicationController
+    ActionController::Parameters.permit_all_parameters = true
 
     def index
         @reviews = Review.all
@@ -11,8 +12,8 @@ class Api::ReviewsController < ApplicationController
     end
 
     def create
-        @review = Review.new(review_params)
-
+        @review = Review.new(params.except(:format, :controller, :action))
+        debugger
         if @review.save
             render :show
         else

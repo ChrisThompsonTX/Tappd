@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import BeerShow from './beer_show'
 import { fetchBeer } from '../../actions/beer_actions'
+import { createReview } from '../../actions/review_actions'
 
 const mSTP = ({entities, session}) => ({
     beer: entities.beers,

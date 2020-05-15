@@ -25,9 +25,8 @@ class BeerModal extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-
     formData.append("name", this.state.beerName)
-    formData.append("brewery_id", this.state.breweryName.id)
+    formData.append("brewery_id", this.state.breweryName)
     formData.append("style", this.state.beerStyle)
     formData.append("rating", 5.0)
     formData.append("description", this.state.beerDescription)
@@ -48,7 +47,7 @@ class BeerModal extends React.Component {
     this.props.createBeer(formData).then(res => {
         if (res.type === "RECEIVE_BEER_ERRORS") {
             return null;
-        } else if (res.type === "RECEIVE_BEER") {
+        } else {
             return this.props.history.push(`/beer/${res.beer.id}`)
         }
     })
@@ -70,7 +69,7 @@ class BeerModal extends React.Component {
       } else if (type === "beerIBU") {
           that.setState({ beerIBU: e.target.value });
       } else if (type === "image") {
-          that.setState({ label: e.target.value });
+          that.setState({ label: e.target.files[0] });
       }
     };
   }
@@ -150,7 +149,7 @@ class BeerModal extends React.Component {
                       id="file-upload"
                       className="image-upload"
                       type="file"
-                      accept="image/*"
+                      // accept="image/*"
                       onChange={this.handleChange("image")}
                     >
                     </input>
