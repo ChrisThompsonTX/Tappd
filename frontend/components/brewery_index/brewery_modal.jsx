@@ -2,6 +2,7 @@ import React from 'react';
 import './brewery_modal.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { withRouter } from "react-router-dom"
 
 class BreweryModal extends React.Component {
 
@@ -212,5 +213,5 @@ class BreweryModal extends React.Component {
   }
 }
 
-export default BreweryModal;
+export default withRouter(BreweryModal);
 

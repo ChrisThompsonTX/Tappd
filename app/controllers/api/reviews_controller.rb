@@ -13,7 +13,6 @@ class Api::ReviewsController < ApplicationController
 
     def create
         @review = Review.new(params.except(:format, :controller, :action))
-        debugger
         if @review.save
             render :show
         else

@@ -45,7 +45,6 @@ export const createBrewery = brewery => dispatch => {
     return APIUtil.createBrewery(brewery)
         .then(
             brewery => {
-                debugger
                 return dispatch(receiveBrewery(brewery))},
             err => (dispatch(receiveErrors(err.responseJSON)))
         )

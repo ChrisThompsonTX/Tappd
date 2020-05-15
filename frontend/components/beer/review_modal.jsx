@@ -2,6 +2,7 @@ import React from 'react';
 import './review_modal.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { withRouter } from "react-router-dom"
 
 class ReviewModal extends React.Component {
 
@@ -20,19 +21,22 @@ class ReviewModal extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        console.log(this.state.photo)
         const formData = new FormData();
 
         formData.append("rating", (this.state.rating / 4))
         formData.append("body", this.state.body)
         formData.append("beer_id", this.props.beer.id)
         formData.append("user_id", this.props.user_id)
-        formData.append("photo", this.state.photo)
+        if (this.state.photo) {
+            formData.append("photo", this.state.photo)
+        }
 
         this.props.createReview(formData).then(res => {
-            if (res.type === "RECEIVE_BEER_ERRORS") {
+            if (res.type === "RECEIVE_REVIEW_ERRORS") {
                 return null;
-            } else if (res.type === "RECEIVE_BEER") {
-                return this.props.history.push(`/beer/${this.props.beer.id}`)
+            } else if (res.type === "RECEIVE_SINGLE_REVIEW") {
+                window.location.reload(true)
             }
         })
     }
@@ -128,5 +132,5 @@ class ReviewModal extends React.Component {
     }
 }
 
-export default ReviewModal;
+export default withRouter(ReviewModal);
 

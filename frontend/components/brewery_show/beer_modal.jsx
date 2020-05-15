@@ -2,6 +2,7 @@ import React from 'react';
 import './beer_modal.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { withRouter } from "react-router-dom"
 
 class BeerModal extends React.Component {
 
@@ -46,8 +47,10 @@ class BeerModal extends React.Component {
     // }
     this.props.createBeer(formData).then(res => {
         if (res.type === "RECEIVE_BEER_ERRORS") {
+
             return null;
         } else {
+  
             return this.props.history.push(`/beer/${res.beer.id}`)
         }
     })
@@ -224,5 +227,5 @@ class BeerModal extends React.Component {
   }
 }
 
-export default BeerModal;
+export default withRouter(BeerModal);
 
