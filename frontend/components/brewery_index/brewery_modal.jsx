@@ -40,7 +40,9 @@ class BreweryModal extends React.Component {
     this.props.createBrewery(formData).then(res => {
       if (res.type === "RECEIVE_BREWERY_ERRORS") {
         return null;
-      } else if (res.type === "RECEIVE_BREWERY") {
+        console.log("failure")
+      } else if (res.type === "RECEIVE_SINGLE_BREWERY") {
+        console.log("success")
         return this.props.history.push(`/brewery/${res.brewery.id}`)
       }
     })

@@ -1,7 +1,14 @@
 class Api::UsersController < ApplicationController
+    require 'open-uri'
 
     def create
         @user = User.new(user_params)
+        if !user_params[:profile_photo] 
+            defaultPhoto = open('https://tappd-seeds.s3-us-west-1.amazonaws.com/ProfilePictures/Demo.jpeg')
+            @user.profile_photo.attach(io: defaultPhoto, filename: 'Demo.jpeg')
+            # debugger
+        end
+            # debugger
         if @user.save
             login(@user)
             render '/api/users/show'
